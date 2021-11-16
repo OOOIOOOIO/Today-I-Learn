@@ -3,4 +3,4 @@
 ## Java
 
 - ### Collection & Collections     
-  - [제목을 쓰고](여기에링크를 달면 된다. .md 형식으로 정리하기 앞으로!)
+  - [Collection](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Collection%20&%20Collections/Collection%EC%9D%B4%EB%9E%80.md)
