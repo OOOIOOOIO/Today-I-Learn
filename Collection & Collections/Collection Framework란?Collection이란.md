@@ -13,7 +13,7 @@ Collection 인터페이스를 상속받고 있지 않지만 Collection Framework
 ArrayList, LinkedList, Vector가 있다.
 
 
-### <List 인터페이스를 구현한 클래스>
+### List 인터페이스를 구현한 클래스
 
 - ArrayList : 단방향 포인터 구조로 각 데이터에 대한 인덱스를 가지고 있어 조회 기능에 뛰아난 성능을 보인다
 
@@ -30,7 +30,7 @@ ArrayList, LinkedList, Vector가 있다.
 HashSet, TreeSet이 있다.
 
 
-### <Set 인터페이스를 구현한 클래스>
+### Set 인터페이스를 구현한 클래스
 
 - HashSet : 가장 빠른 임의의 접근 속도와 순서를 예측할 수 없다.
 
@@ -44,7 +44,7 @@ HashSet, TreeSet이 있다.
 값(Value)의 중복은 허용한다.
 
 
-### <Map 인터페이스를 구현한 클래스>
+### Map 인터페이스를 구현한 클래스
 - HashMap : 중복과 순서가 허용되지 않으며 null값이 올 수 있다.
 
 - Hashtable : HashMap보다는 느리지만 동기화를 지원하고 null값이 올 수 없다.
