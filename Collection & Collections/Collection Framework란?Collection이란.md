@@ -4,7 +4,7 @@
 이를 구현하는 클래스를 정의하는 인터페이스를 제공한다.
 
 - Collection 인터페이스는 List, Set, Queue로 크게 3가지 상위 인터페이스로 분류할 수 있다. 그리고 Map같은 경우
-Collection 인터페이스를 상송받고 있지 않지만 CollectionFramework로 분류된다.
+Collection 인터페이스를 상속받고 있지 않지만 Collection Framework로 분류된다.
 
 ----------------------------------------------------------
 ## <List 인터페이스>
