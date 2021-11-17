@@ -24,53 +24,65 @@ ArrayList, LinkedList, Vector가 있다.
 
 -----------------------------------------------------
   
-  
+
+## ArrayList 메소드 --> LinkedList도 비슷하지만 쓰임새가 다르다
+
+ 모두 자동으로 저장된다. 왜? 파라미터로 리스트(주소값)을 주었으니까.
+- value == Obj o
+
+> .add(Obj o) : return type --> boolean	   
+> O(n) - 추가
  
+>.add(int index, Obj o) : return type --> void       
+> O(n) - 특정 인덱스에 삽입
+
+>.set(int index, Obj o) : return type --> integer(pop된 값)     
+> O(1) - 수정
+
+>.remove(int index) : return --> integer							
+> O(1) - 삭제
+
+>.remove(Obj o) : index와 Obj가 둘 다 있어서 Integer(10) 이런식으로 넣어줘야 한다. return type --> boolean       
+>O(n) - 삭제    
+
   
-  < ArrayList 메소드들 > --> LinkedList도 비슷하지만 쓰임새가 다르다
- 
-  
-   value == Obj
-  
-  .add(value) : return type --> boolean							 / O(n) - 추가
-  
-  .add(int index, value) : return type --> void					/ O(n) - 특정 인덱스에 삽입
-  
-  .set(int index, value) : return type --> integer(pop된 값) 		/ O(1) - 수정
-  
-  .remove(int index) : return --> integer							/ O(1) - 삭제
-  .remove(Obj) : index와 Obj가 둘 다 있어서 Integer(10) 이런식으로 넣어줘야 한다. / O(n) - 삭제
-  				 모두 자동으로 저장된다. 왜? 파라미터로 리스트(주소값)을 주었으니까.
-  				 return type --> boolean
-  				
-  .get(int index) : .size() return type --> integer				/ O(1) - 탐색
-  
-  .contains(Obj) : return type --> boolean							/ O(n) - 값이 있는지 확인
-  
-  .indexOf(Obj) : return --> int / 없다면 -1 return					/ O(n) - 인덱스 추출
-  
-  .lastIndexOf(Obj) : return --> int / 없다면 -1 return				/ O(n) - 인덱스 추출
-  
-  .size() : return type --> int									/ O(1) - 배열 크기
-  
-  .isEmpty() : return type --> boolean								/ O(1) - 비어있는지
-  
-  .clone() : return type --> Object								/ O(n) - 복사(객체만, 요소는 X
-  
-  .clear() : return type --> void									/ O(n) - 전체 삭제(empty 됨)
-  
-  .equals(ArrayList) : return type --> boolean
-  
-  
-  	< 자주 쓰는 표현들 >
-  
-   인덱스로 삭제
- arr.remove(arr.indexOf(value));
-  
-   값으로 삭제
-  arr.remove(arr.get(int index)); 
-  
-  arr.remove(arr.get(arr.indexOf(value)));
-  
-   비어있는지 
-  if(arr.isEmpty()){
+>.get(int index) : .size() return type --> integer     
+>O(1) - 탐색
+
+>.contains(Obj o) : return type --> boolean							  
+> O(n) - 값이 있는지 확인
+
+>.indexOf(Obj o) : return --> int / 없다면 -1 return					  
+> O(n) - 인덱스 추출
+
+>.lastIndexOf(Obj o) : return --> int / 없다면 -1 return				  
+> O(n) - 인덱스 추출
+
+>.size() : return type --> int    
+>O(1) - 배열 크기
+
+>.isEmpty() : return type --> boolean    
+> O(1) - 비어있는지
+
+>.clone() : return type --> Object   
+> O(n) - 복사(객체만, 요소는 X
+
+>.clear() : return type --> void     
+>O(n) - 전체 삭제(empty 됨)
+
+>.equals(ArrayList) : return type --> boolean
+
+
+#### 자주 쓰는 표현들
+
+인덱스로 삭제
+arr.remove(arr.indexOf(value));
+
+값으로 삭제
+arr.remove(arr.get(int index)); 
+
+arr.remove(arr.get(arr.indexOf(value)));
+
+비어있는지 
+if(arr.isEmpty()){
+}
