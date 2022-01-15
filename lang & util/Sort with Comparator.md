@@ -1,6 +1,6 @@
 # Sort with Comparator
 
-- &nbsp;Comparator는 익명 클래스로 여러개를 생성할 수 있지만 Comparable같은 경우 implements를 한 후 compareTo 하나 박에
+- &nbsp;Comparator는 익명 클래스로 여러개를 생성할 수 있지만 Comparable같은 경우 implements를 한 후 compareTo 하나 밖에
 구현할 수 없다. 그렇다보니, 보통 Comparable은 비교하고자 하는 가장 기본적인 설정(오름차순)으로 구현하는 경우가 많고, Comparator는 여러개를 생성할 수 있다보니
 특별한 정렬을 하고싶을 때 많이 쓰인다.<br>
 
