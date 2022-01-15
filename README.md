@@ -13,7 +13,7 @@
 
 <hr>
 
-- ### lang, util
+- ### lang & util
   - [Arrays]()
   - [Comparable]()
   - [Comparator]()
