@@ -90,49 +90,51 @@ if(arr.isEmpty()){
 ---------------------------------------------
 ### 간단하게 ArrayList와 LinkedList 사용해보기
 
-    public class List_Study {
-     public static void main(String[] args) {
-      // ArrayList
+```java
+public class List_Study {
+ public static void main(String[] args) {
+  // ArrayList
 
-      ArrayList<Integer> arr = new ArrayList<>();
+  ArrayList<Integer> arr = new ArrayList<>();
 
-      arr.add(10);
-      arr.add(20);
-      arr.add(30);
-      arr.add(40);
-      arr.add(50);
-      arr.add(60);
-      arr.add(null);
-      arr.add(null);
-      arr.add(null);
+  arr.add(10);
+  arr.add(20);
+  arr.add(30);
+  arr.add(40);
+  arr.add(50);
+  arr.add(60);
+  arr.add(null);
+  arr.add(null);
+  arr.add(null);
 
-      System.out.println(arr.get(3));
+  System.out.println(arr.get(3));
 
-      arr.remove(arr.get(3));
-      arr.remove(arr.indexOf(10));
+  arr.remove(arr.get(3));
+  arr.remove(arr.indexOf(10));
 
-      System.out.println(arr);
+  System.out.println(arr);
 
-      Collections.fill(arr, 1);
+  Collections.fill(arr, 1);
 
-      System.out.println("fill 사용 : " +arr);
+  System.out.println("fill 사용 : " +arr);
 
-      // LinkedList
+  // LinkedList
 
-      LinkedList<Integer> list = new LinkedList<>();
-      list.add(10);
-      list.add(20);
-      list.add(30);
-      list.add(40);
-      list.add(50);
-      list.add(60);
+  LinkedList<Integer> list = new LinkedList<>();
+  list.add(10);
+  list.add(20);
+  list.add(30);
+  list.add(40);
+  list.add(50);
+  list.add(60);
 
-      System.out.println(list.get(3));
+  System.out.println(list.get(3));
 
-      list.remove(list.get(3));
+  list.remove(list.get(3));
 
-      System.out.println(list);
+  System.out.println(list);
 
 
-     }
-    }
+ }
+}
+```
