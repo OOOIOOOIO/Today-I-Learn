@@ -40,7 +40,7 @@
   - [완전탐색 - 비트마스크]
   - [재귀(Recursion)]
   - [Dynamic Programming](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Dynamic%20Programming.md)
-  - [Divide And Conqu]
+  - [Divide And Conquer]
   - [Greedy]
   - [Binary Search]
   - [Merge Sort]
