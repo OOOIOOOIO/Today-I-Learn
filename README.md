@@ -34,3 +34,8 @@
   - [큐]
   - [재귀]
   - [정렬]
+
+<hr>
+
+- ### 수학
+  - [경우의 수](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/%EC%88%98%ED%95%99/%EA%B2%BD%EC%9A%B0%EC%9D%98%20%EC%88%98.md)
