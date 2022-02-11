@@ -23,7 +23,7 @@
 <hr>
 
 - ### Algorithm
-  - [Dynamic Programming]
+  - [Dynamic Programming](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Dynamic%20Programming.md)
 
 <hr>
   
