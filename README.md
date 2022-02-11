@@ -16,16 +16,36 @@
  
 <hr>
 
-- ### Collection & Collections     
+- ### Collection & Collections & Data Structure
   - [Collection Framework](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Collection%20&%20Collections/Collection%20Framework.md)
   - [List](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Collection%20&%20Collections/List.md)
+  - [ArrayList]
+  - [LinkedList]
   - [Set]
   - [Map]
+  - [Stack]
+  - [Queue]
+  - [Deque]
+  - [Tree]
+  - 
 
 <hr>
 
 - ### Algorithm
+  - [완전탐색 - Brute Force]
+  - [완전탐색 - BFS(Bread-First Search)]
+  - [완전탐색 - DFS(Depth First Search)]
+  - [완전탐색 - Back Tracking]
+  - [완전탐색 - 순열]
+  - [완전탐색 - 비트마스크]
+  - [재귀(Recursion)]
   - [Dynamic Programming](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Dynamic%20Programming.md)
+  - [Divide And Conqu]
+  - [Greedy]
+  - [Binary Search]
+  - [Merge Sort]
+  - [Quick Sort]
+  - [Heap Sort]
 
 <hr>
   
