@@ -27,7 +27,7 @@
   - [Queue]
   - [Deque]
   - [Tree]
-  - 
+  - []
 
 <hr>
 
