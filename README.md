@@ -1,4 +1,4 @@
-# Today_I_Learn_With_Java
+# Today_I_Learn_With_JAVA
 
 ## Java
 
@@ -27,7 +27,7 @@
   - [Queue]
   - [Deque]
   - [Tree]
-  - []
+
 
 <hr>
 
@@ -56,7 +56,9 @@
   - [큐]
   - [재귀]
   - [정렬]
-
+  - [트리]
+  - [해시]
+  
 <hr>
 
 - ### 수학
