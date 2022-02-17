@@ -1,4 +1,4 @@
-#	DFS(Depth-First-Search) 깊이 우선 탐색
+# DFS(Depth-First-Search) 깊이 우선 탐색
 
 
 ## 그래프 탐색이란
