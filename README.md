@@ -36,8 +36,8 @@
 
 - ### Algorithm
   - [완전탐색 - Brute Force]
-  - [완전탐색 - BFS(Bread-First Search)]
-  - [완전탐색 - DFS(Depth First Search)]
+  - [완전탐색 - BFS(Bread First Search)](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Algorithm/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89%20-%20BFS(Bread%20First%20Search).md)
+  - [완전탐색 - DFS(Depth First Search)](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Algorithm/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89%20-%20DFS(Depth%20First%20Search).md)
   - [완전탐색 - Back Tracking]
   - [완전탐색 - 순열]
   - [완전탐색 - 비트마스크]
