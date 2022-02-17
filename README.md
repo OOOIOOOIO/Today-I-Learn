@@ -27,6 +27,7 @@
   - [Queue]
   - [Deque]
   - [Tree]
+  - [Graph]
 
 
 <hr>
