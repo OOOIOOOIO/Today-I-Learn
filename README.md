@@ -17,8 +17,8 @@
 <hr>
 
 - ### Collection & Collections & Data Structure
-  - [Collection Framework](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Collection%20&%20Collections/Collection%20Framework.md)
-  - [List](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Collection%20&%20Collections/List.md)
+  - [Collection Framework](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections%20%26%20Data%20Structure/Collection%20Framework.md)
+  - [List](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20&%20Collections%20&%20Data%20Structure/List.md)
   - [ArrayList]
   - [LinkedList]
   - [Set]
@@ -28,8 +28,8 @@
   - [Deque]
   - [Tree]
   - [Graph](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections/Graph.md)
-  - [Graph-인접 리스트](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections/Graph%20-%EC%9D%B8%EC%A0%91%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.md)
-  - [Graph-인접 행렬](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections/Graph%20-%EC%9D%B8%EC%A0%91%20%ED%96%89%EB%A0%AC.md)
+  - [Graph-인접 리스트](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections%20%26%20Data%20Structure/Graph%20-%EC%9D%B8%EC%A0%91%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.md)
+  - [Graph-인접 행렬](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections%20%26%20Data%20Structure/Graph%20-%EC%9D%B8%EC%A0%91%20%ED%96%89%EB%A0%AC.md)
 
 
 <hr>
