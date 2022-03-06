@@ -5,7 +5,8 @@
    - ### basic
    - ### Algorithm
    - ### Data structure and Algorithm with Do it! 자료구조와 함께 배우는 알고리즘 입문
-   - ### 수학
+   - 
+- ### 수학
 
 
 ## Java
@@ -72,5 +73,6 @@
   
 <hr>
 
-- ### 수학
+## 수학
   - [경우의 수](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/%EC%88%98%ED%95%99/%EA%B2%BD%EC%9A%B0%EC%9D%98%20%EC%88%98.md)
+  - [최대공약수 최소공배수]()
