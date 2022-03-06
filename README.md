@@ -75,4 +75,4 @@
 
 ## 수학
   - [경우의 수](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/%EC%88%98%ED%95%99/%EA%B2%BD%EC%9A%B0%EC%9D%98%20%EC%88%98.md)
-  - [최대공약수 최소공배수]()
+  - [정수론 - 유클리드 호제법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/%EC%88%98%ED%95%99/%EC%A0%95%EC%88%98%EB%A1%A0%20-%20%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C%20%ED%98%B8%EC%A0%9C%EB%B2%95.md)
