@@ -1,4 +1,4 @@
-# Today_I_Learn_With_JAVA
+# Today_I_Learn
 
 ## 목차
 - ### Java
