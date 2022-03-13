@@ -1,15 +1,23 @@
 # Today_I_Learn
 
 ## 목차
-- ### Git & github 사용법
+- ### Git & github
+   - ### Git & github 사용법
 - ### Java
    - ### basic
    - ### Algorithm
    - ### Data structure and Algorithm with Do it! 자료구조와 함께 배우는 알고리즘 입문
    - 
 - ### 수학
+  - ### 경우의 수
+  - ### 정수론 - 유클리드 호제법
 
-##
+<br>
+<hr>
+<br>
+
+
+## Git & github
 - [Git & github 사용법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 ## Java
