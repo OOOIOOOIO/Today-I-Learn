@@ -1,16 +1,18 @@
 # Today_I_Learn
+> &nbsp; 정리하고 공부하고 싶은 것들!
+<br>
 
 ## 목차
-- ### Git & github
-   - ### Git & github 사용법
-- ### Java
-   - ### basic
-   - ### Algorithm
-   - ### Data structure and Algorithm with Do it! 자료구조와 함께 배우는 알고리즘 입문
+- #### Git & github
+   - #### Git & github 사용법
+- #### Java
+   - #### basic
+   - #### Algorithm
+   - #### Data structure and Algorithm with Do it! 자료구조와 함께 배우는 알고리즘 입문
    - 
-- ### 수학
-  - ### 경우의 수
-  - ### 정수론 - 유클리드 호제법
+- #### 수학
+  - #### 경우의 수
+  - #### 정수론 - 유클리드 호제법
 
 <br>
 <hr>
