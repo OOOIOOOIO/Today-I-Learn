@@ -1,6 +1,7 @@
 # Today_I_Learn
 
 ## 목차
+- ### Git & github 사용법
 - ### Java
    - ### basic
    - ### Algorithm
@@ -8,6 +9,8 @@
    - 
 - ### 수학
 
+##
+- [Git & github 사용법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 ## Java
 
