@@ -3,14 +3,14 @@
 <br>
 
 ## 목차
-- #### Git & github
+- ### Git & github
    - #### Git & github 사용법
-- #### Java
+- ### Java
    - #### basic
    - #### Algorithm
    - #### Data structure and Algorithm with Do it! 자료구조와 함께 배우는 알고리즘 입문
    - 
-- #### 수학
+- ### 수학
   - #### 경우의 수
   - #### 정수론 - 유클리드 호제법
 
