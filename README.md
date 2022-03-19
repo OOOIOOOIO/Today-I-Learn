@@ -1,8 +1,10 @@
 # Today_I_Learn
 > &nbsp; 정리하고 공부하고 싶은 것들!
+> 
 <br>
 
-## 목차
+# Index
+
 - ### Git & github
    - #### Git & github 사용법
 
