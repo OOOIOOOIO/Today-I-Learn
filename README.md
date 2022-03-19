@@ -6,8 +6,8 @@
 # Index
 
 - ### Git & github
-   - #### Git & github 사용법
-
+   - #### Git & github 개념 및 Git Bash사용법
+   
 - ### Java
    - #### basic
    
@@ -28,9 +28,7 @@
 <br>  
 
 ## Git & github
-- [Git & github 사용법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
-
-<br>
+- [Git & github 개념 및 Git Bash사용법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20Git%20Bash%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
 <hr>
 
