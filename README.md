@@ -39,7 +39,7 @@
   
   - [BufferedReader-writer & StringTokenizer]
   
-  - [Exception]
+  - [Exception](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/basic/Exception.md)
   
   - [String]
   
