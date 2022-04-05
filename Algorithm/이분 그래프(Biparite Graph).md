@@ -6,9 +6,14 @@
 
 <br>
 
+![image](https://user-images.githubusercontent.com/74396651/161661154-c89d37f4-325b-4463-8a97-95bd78e14335.png)
+
+<br>
+
 ![image](https://user-images.githubusercontent.com/74396651/161659484-a129eeaf-036b-48a9-8fcd-32fede771a07.png)
 
 <br>
+
 
 
 ## 구분하는 법
