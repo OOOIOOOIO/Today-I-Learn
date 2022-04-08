@@ -1,9 +1,3 @@
-package algorithm;
-
-public class Greed_Algorithm {
-
-}
-/*
 
 # Greedy Algorithm(그리디 알고리즘)
 
@@ -41,4 +35,3 @@ public class Greed_Algorithm {
 
 
 
-*/
