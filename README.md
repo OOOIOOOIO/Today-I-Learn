@@ -117,7 +117,7 @@
   
   - [Greedy Algorithm](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Greed%20Algorithm.md)
   
-  - [Flood fill Algorithm(그래프 상하좌우)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Flood%20fill%20Algorithm(%EC%9D%B8%EC%A0%91%ED%95%9C%20%EC%83%81%ED%95%98%EC%A2%8C%EC%9A%B0%20%EC%9C%84%EC%B9%98%20%EC%B0%BE%EA%B8%B0(.md)
+  - [Flood fill Algorithm(그래프 상하좌우)](https://github.com/OOOIOOOIO/Today_I_Learn/tree/master/Algorithm)
   
   - [이분 그래프(Biparite Graph)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/%EC%9D%B4%EB%B6%84%20%EA%B7%B8%EB%9E%98%ED%94%84(Biparite%20Graph).md)
   
