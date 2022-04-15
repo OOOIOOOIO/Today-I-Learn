@@ -18,4 +18,4 @@
 - 방문하지 않은 노드 중에서 가장 비용이 적은 노드를 선택한다.(그리디 알고리즘)
 - 해당 노드로부터 갈 수 있는 노드들의 비용을 갱신한다.(다이나믹 프로그래밍)
 
-<img style="width:800px; height:500px;" src="https://user-images.githubusercontent.com/74396651/163569872-95639e4d-abc5-4b2b-a9c2-e7fdac83381f.png"/>
+   <img style="width:800px; height:500px;" src="https://user-images.githubusercontent.com/74396651/163569872-95639e4d-abc5-4b2b-a9c2-e7fdac83381f.png"/>
