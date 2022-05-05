@@ -63,7 +63,9 @@ public class Floyd_Warshall_Algorithm {
 			dist[b][a] = Math.min(dist[b][a], cost);
 		}
 
+
 		FloydWarshall();
+
 
 		// 출력
 		for (int i = 0; i < N; i++) {
@@ -79,8 +81,17 @@ public class Floyd_Warshall_Algorithm {
 		}
 	}
 	
+	// 플로이드 워셜 알고리즘
 	static void FloydWarshall() {
-		// 플로이드 워셜 알고리즘
+		
+		/*
+		
+		k : 경유지
+		i : 시작
+		j : 끝
+		
+		*/
+		
 		// 노드를 1개부터 N개까지 거쳐가는 경우를 모두 고려한다.
 		for (int k = 0; k < N; k++) {
 			// 노드 i에서 j로 가는 경우.
