@@ -49,11 +49,23 @@
 - 프로젝트 폴더 내에 무엇이 있는지
    - dir
 
+- 프로젝트 폴더 내에 로컬 저장소 생성
+   - git init
+
 - 프로젝트 폴더 내 상태 보기
    - git status
 
-- 프로젝트 폴더 내에 로컬 저장소 생성
-   - git init
+
+- github 저장소 만들기
+   - 왼쪽 메뉴의 Create Repository 클릭
+
+- 로컬 저장소에 github 저장소 주소 설정하기
+   - git remote add origin https://github.com/깃허브아이디/레포지토리이름.git
+
+
+- 현재 저장소 주소 확인하기
+   - git remote -v
+
 
 - git에 버전 관리할 파일을 선택해서 add(stage에 올림)
    - git add 파일명
@@ -79,15 +91,6 @@
 		git config --global user.name "깃허브이름"
 ```
 
-- github 저장소 만들기
-   - 왼쪽 메뉴의 Create Repository 클릭
-
-- 로컬 저장소에 github 저장소 주소 설정하기
-   - git remote add origin https://github.com/깃허브아이디/레포지토리이름.git
-
-
-- 현재 저장소 주소 확인하기
-   - git remote -v
 
 - 만든 버전(커밋)을 github에 올리기
    - git push -u origin 브랜치이름
@@ -99,22 +102,23 @@
 =========================================================================
 
 # Staging 뭐시기 공부해서 다시 정리하기
-commit 취소하기 
+
+- commit 취소하기 
 git reset : 전체 add 파일 취소
 git reset HEAD 파일명 : 특정 add 파일 취소
 git reset HEAD^^^^^ : "^" 숫자 만큼 최신 커밋 취소
 
 
-기존에 파일이 있는 경우 업데이트 된 것을 받아오기
+- 기존에 파일이 있는 경우 업데이트 된 것을 받아오기
 git pull
 
-branch 확인하기
+- branch 확인하기
 git branck
 
-branck 생성하기
+- branck 생성하기
 git branck 생성할 브랜치
 
-branch 변경하기
+- branch 변경하기
 git checkout 생성한 브랜치
 
 
@@ -122,7 +126,7 @@ git checkout 생성한 브랜치
 
 =========================================================================
 
-Pull Request와 Merge
+# Pull Request와 Merge
 
 commit을 한다고 최종 코드가 수정되는 것은 아닙니다.
 개인이 commit을 했으면, 관리자가 이 코드를 리뷰하고 바꿀것이 있으면 수정해달라고 다시 요청해야하기 때문입니다. 
