@@ -1,25 +1,30 @@
 # Today_I_Learn
 > &nbsp; 정리하고 공부하고 싶은 것들!
 
+<br>
+
 # Index
 
-- ### Git & github
-   - #### Git & github 개념 및 Git Bash사용법
-   - #### Eclipse에서 github 올리는 법
-
-   
 - ### Java
    - #### basic
    
    - #### Algorithm
    
    - #### Data structure and Algorithm with Do it! 자료구조와 함께 배우는 알고리즘 입문
+
+<br>
+
+- ### Network
+
+<br>
+
+- ### Git & github
+
     
+<br>
 
 - ### 수학
-  - #### 경우의 수
-  
-  - #### 정수론 - 유클리드 호제법
+
 
 <br>
 
@@ -27,12 +32,7 @@
 
 <br>  
 
-## Git & github
-- [Git & github 개념 및 Git Bash사용법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20Git%20Bash%EC%82%AC%EC%9A%A9%EB%B2%95.md)
-
-<hr>
-
-<br>  
+ 
 
 ## Java
 
@@ -66,15 +66,11 @@
 <br>  
 
 
-- ### Collection & Collections & Data Structure
+- ### Algorithm
   
   - [Collection Framework](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections%20%26%20Data%20Structure/Collection%20Framework.md)
   
   - [List](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20&%20Collections%20&%20Data%20Structure/List.md)
-  
-  - [ArrayList]
-  
-  - [LinkedList]
   
   - [Set]
   
@@ -88,20 +84,20 @@
   
   - [Tree]
   
+  - [Binary Search]
+  
+  - [Merge Sort]
+  
+  - [Quick Sort]
+  
+  - [Heap Sort]
+
   - [Graph](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections/Graph.md)
   
   - [Graph-인접 리스트](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections%20%26%20Data%20Structure/Graph%20-%EC%9D%B8%EC%A0%91%20%EB%A6%AC%EC%8A%A4%ED%8A%B8.md)
   
   - [Graph-인접 행렬](https://github.com/OOOIOOOIO/Today_I_Learn_With_JAVA/blob/master/Collection%20%26%20Collections%20%26%20Data%20Structure/Graph%20-%EC%9D%B8%EC%A0%91%20%ED%96%89%EB%A0%AC.md)
 
-<br>
-
-<hr>
-
-<br>  
-
-
-- ### Algorithm
   
   - [완전탐색 - Brute Force]
   
@@ -125,13 +121,18 @@
 
   - [Dijkstra Algorithm(최단거리 알고리즘)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Dijkstra%20Algorithm.md)
   
-  - [Binary Search]
+  -[Bellman-Ford Algorithm](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Bellman%20Ford%20Algorithm.md)
   
-  - [Merge Sort]
+  -[Floyd-Warshall Algorithm](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Floyd%20Warshall%20Algorithm.md)
   
-  - [Quick Sort]
+  -[Union Find(MST)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Union%20Find(MST).md)
   
-  - [Heap Sort]
+  -[Kruskal Algorithm(MST)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Kruskal%20Algorithm(MST).md)
+  
+  
+  -[]()
+  
+  -[]()
 
 <br>
 
@@ -162,6 +163,36 @@
 
 <br>  
 
+## Network
+- 네트워크란
+
+- [HTTP 개념 및 요청과 응답](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Network/HTTP%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20%EC%9A%94%EC%B2%AD%EA%B3%BC%20%EC%9D%91%EB%8B%B5.md)
+
+- [Proxy란](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Network/Proxy%EB%9E%80.md)
+
+- REST 방식이란
+
+- TCP란
+
+-
+
+<br>
+
+<hr>
+
+<br>  
+
+
+## Git & github
+- [Git & github 개념 및 Git Bash사용법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20Git%20Bash%EC%82%AC%EC%9A%A9%EB%B2%95.md)
+
+-[Eclipse에서 github 올리는 법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github/Eclipse%EC%97%90%EC%84%9C%20github%20%EC%98%AC%EB%A6%AC%EB%8A%94%20%EB%B2%95.md)
+
+<br>
+
+<hr>
+
+<br> 
 
 # 수학
 
