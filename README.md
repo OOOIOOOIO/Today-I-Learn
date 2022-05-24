@@ -170,11 +170,15 @@
 
 - [Proxy란](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Network/Proxy%EB%9E%80.md)
 
-- REST 방식이란
+- [Packet(패킷)이란](https://github.com/OOOIOOOIO/Today-I-Learn/blob/master/Network/Packet(%ED%8C%A8%ED%82%B7)%EC%9D%B4%EB%9E%80%3F.md)
+
+- OSI Model
 
 - TCP란
 
 -
+
+- REST 방식이란
 
 <br>
 
