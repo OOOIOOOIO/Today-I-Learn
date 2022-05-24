@@ -37,7 +37,7 @@
 ## Java
 
 - ### basic
-  - [Stream(입력에 관한 모든 것)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/basic/Stream(%EC%9E%85%EB%A0%A5%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%AA%A8%EB%93%A0%20%EA%B2%83).md) 
+  - [java.io - Stream(입력)](https://github.com/OOOIOOOIO/Today-I-Learn/blob/master/basic/java.io%20-%20Stream(%EC%9E%85%EB%A0%A5).md)
 
   - [Nested Class](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/basic/Nested%20Class.md)
   
