@@ -121,13 +121,13 @@
 
   - [Dijkstra Algorithm(최단거리 알고리즘)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Dijkstra%20Algorithm.md)
   
-  -[Bellman-Ford Algorithm](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Bellman%20Ford%20Algorithm.md)
+  - [Bellman-Ford Algorithm](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Bellman%20Ford%20Algorithm.md)
   
-  -[Floyd-Warshall Algorithm](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Floyd%20Warshall%20Algorithm.md)
+  - [Floyd-Warshall Algorithm](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Floyd%20Warshall%20Algorithm.md)
   
-  -[Union Find(MST)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Union%20Find(MST).md)
+  - [Union Find(MST)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Union%20Find(MST).md)
   
-  -[Kruskal Algorithm(MST)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Kruskal%20Algorithm(MST).md)
+  - [Kruskal Algorithm(MST)](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Algorithm/Kruskal%20Algorithm(MST).md)
   
   
   -[]()
@@ -186,7 +186,7 @@
 ## Git & github
 - [Git & github 개념 및 Git Bash사용법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20Git%20Bash%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 
--[Eclipse에서 github 올리는 법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github/Eclipse%EC%97%90%EC%84%9C%20github%20%EC%98%AC%EB%A6%AC%EB%8A%94%20%EB%B2%95.md)
+- [Eclipse에서 github 올리는 법](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Git%20%26%20github/Eclipse%EC%97%90%EC%84%9C%20github%20%EC%98%AC%EB%A6%AC%EB%8A%94%20%EB%B2%95.md)
 
 <br>
 
