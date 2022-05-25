@@ -17,11 +17,16 @@
 <br>
 
 # MIME 유형의 작동 방식
+
+![image](https://user-images.githubusercontent.com/74396651/170238473-ca650449-e61f-4a8b-882f-9a60c565c82f.png)
+
+
 - 서버는 HTTP 응답 헤더에 MIME 유형을 삽입한다.
 - 클라이언트는 응답이 나타내는 데이터 유형에 적합한 "플레이어" 애플리케이션을 선택한다.
 - 이러한 플레이어 중 일부는 웹 클라이언트 또는 브라우저에 내장되어 있다.
 
 <br>
+
 
 ### 예시
 > &nbsp;&nbsp;브라우저는 HTTP응답에 정의된 헤더의 Content-Type 값을 사용하여 적절한 확장자, 플러그인으로 파일을 열 수 있다.
@@ -35,6 +40,10 @@
 <br>
 
 # MIME 유형의 구성
+
+![image](https://user-images.githubusercontent.com/74396651/170237715-0b5c4b0e-09fc-4dc1-8ea7-61d50c8502eb.png)
+
+
 - 유형과 하위 유형의 두 부분으로 구성되고 "/(슬래쉬)"로 구분된다.
 - 예를 들어 Ajax를 통해 서버와 통신할 때 contentType : "application/json" 을 살펴보면
    - 유형 : "application"
@@ -47,4 +56,6 @@
 
 
 
-> 참조 : https://hanamon.kr/%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-mime-%ec%9c%a0%ed%98%95%ec%9d%b4%eb%9e%80/
+> 참조 
+> https://dololak.tistory.com/130
+> https://hanamon.kr/%eb%84%a4%ed%8a%b8%ec%9b%8c%ed%81%ac-mime-%ec%9c%a0%ed%98%95%ec%9d%b4%eb%9e%80/
