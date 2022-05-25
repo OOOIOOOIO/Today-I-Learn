@@ -168,6 +168,8 @@
 
 - [HTTP 개념 및 요청과 응답](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Network/HTTP%20%EA%B0%9C%EB%85%90%20%EB%B0%8F%20%EC%9A%94%EC%B2%AD%EA%B3%BC%20%EC%9D%91%EB%8B%B5.md)
 
+- [MIME 유형](https://github.com/OOOIOOOIO/Today-I-Learn/blob/master/Network/MIME%20%EC%9C%A0%ED%98%95.md)
+
 - [Proxy란](https://github.com/OOOIOOOIO/Today_I_Learn/blob/master/Network/Proxy%EB%9E%80.md)
 
 - [Packet(패킷)이란](https://github.com/OOOIOOOIO/Today-I-Learn/blob/master/Network/Packet(%ED%8C%A8%ED%82%B7)%EC%9D%B4%EB%9E%80%3F.md)
@@ -176,7 +178,7 @@
 
 - TCP란
 
--
+- 
 
 - REST 방식이란
 
