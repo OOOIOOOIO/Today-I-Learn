@@ -69,6 +69,50 @@ lamT -> { lamT.start(); }
 
 ```
 
+# 람다식 예제
+```java
+// 익명 함수를 통한 Thread 구현
+Thread thread = new Thread(new Runnable() {
+
+   @Override
+   public void run() {
+      System.out.println("Start");
+      try {
+         Thread.sleep(1000);
+      } catch (InterruptedException e) {
+         System.out.println(e.toString());
+      }
+      System.out.println("End");
+   }
+});
+
+// 람다식을 이용한 Thread 구현
+Thread thread2 = new Thread(() -> {
+   System.out.println("Start");
+   try {
+      Thread.sleep(1000);
+   } catch (InterruptedException e) {
+      System.out.println(e.toString());
+   }
+   System.out.println("End");
+});
+
+// 람다식 및 forEach를 이용한 컬렉션 순회
+List<Integer> list = new ArrayList<Integer>();
+list.add(1);
+list.add(2);
+list.add(3);
+list.add(4);
+
+list.forEach(x -> System.out.println(x));
+list.forEach(System.out::println);
+
+```
+
+<br>
+<hr>
+<br>
+
 <br>
 <hr>
 <br>
@@ -77,8 +121,10 @@ lamT -> { lamT.start(); }
 > &nbsp;&nbsp;함수형 인터페이스는 일반적으로 "구현해야 할 추상 메소드가 하나만 정의된 인터페이스"를 의미한다.
 > &nbsp;&nbsp;@FunctionalInterface 어노테이션을 붙여줌으로써 함수를 1급 객체처럼 다룰 수 있게 해주는 어노테이션으로, 인터페이스에 선언하여 단 하나의 추상 메소드만 갖도록 제한하는 역할을 한다.
 
+
 ```java
-//구현해야 할 메소드가 한개이므로 Functional Interface이다.
+
+// 구현해야 할 메소드가 한개이므로 Functional Interface이다.
 @FunctionalInterface
 public interface Math {
 
@@ -87,7 +133,7 @@ public interface Math {
 }
 
 
-//구현해야 할 메소드가 두개이므로 Functional Interface가 아니다. (오류 사항)
+// 구현해야 할 메소드가 두개이므로 Functional Interface가 아니다. (오류 사항)
 @FunctionalInterface
 public interface Math {
 
@@ -97,16 +143,46 @@ public interface Math {
 }
 
 ```
-
 <br>
 <hr>
 <br>
 
-# Functional Interface 람다 예제
+
+# Functional Interface  예제
 
 ```java
-@FunctionalInterface
+public class Lamda_공부 {
+   
+   // 함수형 인터페이스
+	@FunctionalInterface
+	interface Math{
+		
+		public int cal(int a, int b);
+      
+	}
+	
+	public static void main(String[] args) {
+   
+      // 익명 함수
+		System.out.println(new Math() {
+			public int cal(int a, int b) {
+				return a + b;
+			}
+		}.cal(1, 2));		
+      
+      // 람다식을 이용한 익명 함수
+		Math plus = (a, b) -> a + b;
+		System.out.println(plus.cal(1, 2));
+		
+
+	}
+}
+
 ```
+
+<br>
+<hr>
+<br>
 
 
 
