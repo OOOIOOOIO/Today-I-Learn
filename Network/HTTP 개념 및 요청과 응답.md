@@ -15,8 +15,10 @@
 - &nbsp;HTTP는 무상태 프로토콜이며, 이는 서버가 자원을 절약하기 위해 모든 사용자의 요청마다 연결과 해제의 과정을 거치기 때문에 어떠한 상태나 데이터를 유지하지 않음을 의미한다.
 
 <br>
+<hr>
+<br>
 
-## HTTP 작동 방식
+# HTTP 작동 방식
 
 #### &nbsp;클라이언트가 어떠한 요청(서비스)를 URI를 통해 서버에 요청(Request)을 하게 되면 서버에서는 해당 요청에 대한 결과를 응답(Response)하는 형태로 작동한다.
 
@@ -30,19 +32,25 @@
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdcUnst%2FbtqWXaFbg2p%2F86WwcX7OsOvnkoO71T0RbK%2Fimg.png" width=800px height=600px>
 
 <br>
+<hr>
+<br>
 
-## HTTP 요청(Request)
+# HTTP 요청(Request)
 
 <br>
 
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc7mI3U%2FbtqWX45M76d%2FgGoVLK6rcUJhekrxMcq6a1%2Fimg.png">
 
+### <code> ex) GET/search?q=hello&hl=ko HTTP/1.1</code>
+- Method : 서버가 수행해야 할 동작 --> GET
+- Path : 절대경로 "/"로 시작하는 경로이다. --> /search?q=hello&hl=ko
+- Version of the Protocol : HTTP의 버전
 - header에서 한 줄 띄고 "본문"이라는 것이 적혀 있는데, 본문엔 요청을 할 떄 같이 보낼 데이터가 담겨져있다.
 
 <br>
 
 
-### HTTP 메서드(Method)
+## HTTP 메서드(Method) : 서버가 수행해야 할 동작 과정
 
 ![](https://user-images.githubusercontent.com/4013025/48322141-cf7af680-e604-11e8-8a76-ae4d92a83793.png)
 
@@ -51,14 +59,14 @@
 <br>
 
 
-#### 일반적으로 웹에서 REST API를 작성할 때 HTTP Methods를 이용해 CRUD를 표현한다. REST API, REST 방식은 따로 정리하겠다.
+### 일반적으로 웹에서 REST API를 작성할 때 HTTP Methods를 이용해 CRUD를 표현한다. REST API, REST 방식은 따로 정리하겠다.
 [REST 정리](https://github.com/OOOIOOOIO/Study_Web_development/blob/master/Network/REST.md)
 
 <br>
 
-#### 종류
+## 종류
 
-- GET
+- ### GET
    - 주로 데이터를 읽거나(Read) 검색(Retrieve)할 때에 사용되는 메소드이다. 만약  GET 요청이 성공적으로 이루어진다면 XML이나 JSON과 함께
    200 HTTP 응답 코드를 리턴한다. 에러가 발생하면 주로 404(Not found) error 혹은 400(Bad request) 에러가 발생한다.
    - HTTP 명서에 의하면 GET 요청은 오로지 데이터를 읽을 때에만 사용된다. 수정, 삭제와 같은 데이터를 조작하는 연산에 사용하면 안된다
@@ -70,7 +78,7 @@ GET /polite/1998
 
 ```
 
-- POST
+- ### POST
    - 주로 새로운 리소스를 생성(Create)할 때 사용된다. 조금 더 구체적으로 POST는 하위 리소스들을 생성하는데 사용된다. 성공적으로 Creation을 
    완료하면 201(Created) HTTP 응답을 반환한다.
    - Post Method는 idempotent하지 않다.
@@ -83,7 +91,7 @@ Content-Type : "application/json"
 
 ```
 
-- PUT
+- ### PUT
    - 변경 가능한 리소스를 업데이트하는 데 사용되며 항상 리소스의 식별 정보를 포함해야 한다.
    - Put Method는 idempotent하다.
 ```
@@ -96,7 +104,7 @@ Content-Type : "application/json" // 없어도 됨
 ```
 
 
-- DELETE
+- ### DELETE
    - 특정 리소스를 제거하는 데 사용한다.(일반적으로 Request body가 아닌 URI경로에 제거하려는 리소스의 ID를 전달한다.)
    - 데이터를 삭제하는 것이기 때문에 요청 시 Body와 Content-Type이 비워져 있다.
 ```
@@ -106,23 +114,30 @@ DELETE /polite/1998
 
 ```
 
-- PATCH
+- ### PATCH
    -  변경 가능한 리소스의 부분 업데이트에 사용되며 항상 리소스 식별 정보를 포함해야 한다.(잘 사용하지 않는다. PUT을 사용해 전체 객체를 업데이트하는 것이 관례라고 한다.)
 
-- HEAD
+- ### HEAD
    - 클라이언트가 본문 없이 리소스에 대한 헤더만 검색하는 경우 사용한다.(일반적으로 클라이언트가 서버에 리소스가 있는지 확인하거나 메타 데이터를 읽으려는 때만 GET 대신 사용한다.)
 
-- OPTIONS
+- ### OPTIONS
    - 클라이언트가 서버의 리소스에 대해 수행 가능한 동작을 알아보기 위해 사용한다.(일반적으로 서버는 이 리소스에 대해 사용할 수 있는 HTTP 요청 메서드를 포함하는 Allow 헤더를 반환한다. CORS에 사용한다고 한다.)
-
-- RFC
-
-- Idempotent : 멱등성
-   - 여러번 수행핻 같은 결과를 도출한다는 뜻. 호출로 인해 데이터의 변형이 없다는 뜻이다. 
 
 <br>
 
-## HTTP 응답(Response)
+## 참고 
+
+- ### RFC(Request for Comment)
+   - 비평을 기다리는 문서라는 의미로, 컴퓨터 네트워크 공학 등에서 인터넷 기술에 적용 가능한 새로운 연구, 혁신, 기법 등을 아우르는 메모를 나타낸다.
+
+- ### Idempotent : 멱등성
+   - 여러번 수행해 같은 결과를 도출한다는 뜻. 호출로 인해 데이터의 변형이 없다는 뜻이다. 
+
+<br>
+<hr>
+<br>
+
+# HTTP 응답(Response)
 
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCmjnf%2FbtqWTYTN3X1%2F34p8xLsQtEIk0xMzyjIw8k%2Fimg.png">
 
