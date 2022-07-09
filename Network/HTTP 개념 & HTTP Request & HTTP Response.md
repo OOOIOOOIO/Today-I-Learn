@@ -52,7 +52,11 @@
 
 ## HTTP 메서드(Method) : 서버가 수행해야 할 동작 과정
 
+<br>
+
 ![](https://user-images.githubusercontent.com/4013025/48322141-cf7af680-e604-11e8-8a76-ae4d92a83793.png)
+
+<br>
 
 ![](https://static.packt-cdn.com/products/9781838983994/graphics/image/C15309_01_02.jpg)
 
@@ -60,49 +64,62 @@
 
 
 ### 일반적으로 웹에서 REST API를 작성할 때 HTTP Methods를 이용해 CRUD를 표현한다. REST API, REST 방식은 따로 정리하겠다.
-[REST 정리](https://github.com/OOOIOOOIO/Study_Web_development/blob/master/Network/REST.md)
+
+<br>
+
+## [REST 방식 정리 보러가기](https://github.com/OOOIOOOIO/Study_Web_development/blob/master/Network/REST.md)
 
 <br>
 
 ## 종류
 
 - ### GET
-   - 주로 데이터를 읽거나(Read) 검색(Retrieve)할 때에 사용되는 메소드이다. 만약  GET 요청이 성공적으로 이루어진다면 XML이나 JSON과 함께
-   200 HTTP 응답 코드를 리턴한다. 에러가 발생하면 주로 404(Not found) error 혹은 400(Bad request) 에러가 발생한다.
+   - 주로 데이터를 읽거나(Read) 검색(Retrieve)할 때에 사용되는 메소드이다. 만약  GET 요청이 성공적으로 이루어진다면 XML이나 JSON과 함께 200 HTTP 응답 코드를 리턴한다. 에러가 발생하면 주로 404(Not found) error 혹은 400(Bad request) 에러가 발생한다.
    - HTTP 명서에 의하면 GET 요청은 오로지 데이터를 읽을 때에만 사용된다. 수정, 삭제와 같은 데이터를 조작하는 연산에 사용하면 안된다
    - GET Method는 idempotent하다
+   - cache
 ```
 ex) url
 
-GET /polite/1998
-
+GET /polite/1998 HTTP/1.1
 ```
 
 - ### POST
-   - 주로 새로운 리소스를 생성(Create)할 때 사용된다. 조금 더 구체적으로 POST는 하위 리소스들을 생성하는데 사용된다. 성공적으로 Creation을 
-   완료하면 201(Created) HTTP 응답을 반환한다.
+   - 주로 새로운 리소스를 생성(Create)할 때 사용된다. 조금 더 구체적으로 POST는 하위 리소스들을 생성하는데 사용된다. 성공적으로 Creation을 완료하면 201(Created) HTTP 응답을 반환한다.
    - Post Method는 idempotent하지 않다.
 ```
 ex) json 형식
 
-POST /polite
-body : {name : "SeongHo Kim"}
+POST /polite HTTP/1.1
+body : {"name" : "SeongHo Kim"}
 Content-Type : "application/json"
 
 ```
 
 - ### PUT
    - 변경 가능한 리소스를 업데이트하는 데 사용되며 항상 리소스의 식별 정보를 포함해야 한다.
+   - 리소스가 있으면 대체, 없으면 생성한다. 중요한 점은 완전 덮어버린다는 것이다.
+   - POST와 다른 점은 클라이언트가 리소스 위치를 알고 URI를 지정한다.
    - Put Method는 idempotent하다.
 ```
 ex) json 형식
 
-PUT /polite
-body : {name : "SEONGHO KIM"}
+PUT /polite/1998 HTTP/1.1  or PUT /polite HTTP/1.1
+body : {"name" : "SEONGHO KIM", "age" : 99}
 Content-Type : "application/json" // 없어도 됨
 
 ```
 
+- ### PATCH
+   -  변경 가능한 리소스의 부분 업데이트에 사용되며 항상 리소스 식별 정보를 포함해야 한다.(잘 사용하지 않는다. PUT을 사용해 전체 객체를 업데이트하는 것이 관례라고 한다.)
+   -  부분 리소스 변경
+```
+ex) json 형식
+
+PUT /polite/1998 HTTP/1.1
+body : {"name" : "SEONGHO KIM", }
+Content-Type : "application/json" // 없어도 됨
+```
 
 - ### DELETE
    - 특정 리소스를 제거하는 데 사용한다.(일반적으로 Request body가 아닌 URI경로에 제거하려는 리소스의 ID를 전달한다.)
@@ -114,32 +131,31 @@ DELETE /polite/1998
 
 ```
 
-- ### PATCH
-   -  변경 가능한 리소스의 부분 업데이트에 사용되며 항상 리소스 식별 정보를 포함해야 한다.(잘 사용하지 않는다. PUT을 사용해 전체 객체를 업데이트하는 것이 관례라고 한다.)
-
 - ### HEAD
    - 클라이언트가 본문 없이 리소스에 대한 헤더만 검색하는 경우 사용한다.(일반적으로 클라이언트가 서버에 리소스가 있는지 확인하거나 메타 데이터를 읽으려는 때만 GET 대신 사용한다.)
 
 - ### OPTIONS
    - 클라이언트가 서버의 리소스에 대해 수행 가능한 동작을 알아보기 위해 사용한다.(일반적으로 서버는 이 리소스에 대해 사용할 수 있는 HTTP 요청 메서드를 포함하는 Allow 헤더를 반환한다. CORS에 사용한다고 한다.)
 
+- ### CONNECT
+
+- ### TRACE
+
 <br>
 
-## 참고 
-
+## 참고
 - ### RFC(Request for Comment)
    - 비평을 기다리는 문서라는 의미로, 컴퓨터 네트워크 공학 등에서 인터넷 기술에 적용 가능한 새로운 연구, 혁신, 기법 등을 아우르는 메모를 나타낸다.
 
-- ### Idempotent : 멱등성
-   - 여러번 수행해 같은 결과를 도출한다는 뜻. 호출로 인해 데이터의 변형이 없다는 뜻이다. 
-
-<br>
-<hr>
 <br>
 
 # HTTP 응답(Response)
 
+<br>
+
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCmjnf%2FbtqWTYTN3X1%2F34p8xLsQtEIk0xMzyjIw8k%2Fimg.png">
+
+<br>
 
 ### 1XX : Information responses
 >&nbsp;상태코드가 "1"로 시작하는 경우는 서버가 요청을 받았으며, 서버에 연결된 클라이언트는 작업을 계속 진행하라는 의미이다. 해당 코드는 HTTP 1.0에서 지원되지 않는다.
@@ -152,6 +168,8 @@ DELETE /polite/1998
 
 - 102 : Processing(WebDAV)
    - 서버가 요청을 수신하였으며 이를 처리하고 있지만, 아직 제대로 된 응답을 알려줄 수 없음을 나타낸다.
+   
+<br>   
    
 ### 2XX : Successful responses
 - 200 : OK
@@ -168,17 +186,48 @@ DELETE /polite/1998
 - 208 : Already Reported
 - 226 : IM Used
 
+<br>
+
 ### 3XX : Redirection messages
+
+<br>
 
 ### 4XX : Client error responses
 
+<br>
+
 ### 5XX : Server error responses
 
+<br>
 
 >&nbsp;마찬가지로 응답에도 본문(body)이 존재한다. 요청에 대한 데이터가 담겨있으며 브라우저는 응답 메세지에 담겨있는 HTML을 받아 화면에 렌더링을 한다.
 
+<br>
+<hr>
+<br>
 
+## HTTP 속성
 
+### Idempotent : 멱등성
+- 여러번 수행해 같은 결과를 도출한다는 뜻. 호출로 인해 데이터의 변형이 없다는 뜻이다. 
+- GET : 한 번 조회하든, 두 번 조회하든 같은 결과가 조회된다.
+- PUT : 기존 것을 날리고 새로운 데이터를 덮어 씌우기 때문에 같은 요청을 여러번 해도 최종 결과는 같다.
+- DELETE : 같은 요청을 여러번 해도 삭제된 결과는 똑같다.
+- POST : 멱등이 아니다!!!! 두 번 호출하면 같은 결제가 중복해서 발생할 수 있다! 
+- 자동 복구 메커니즘 등에서 사용하며, 중간에 리소스를 변경할 경우 멱등하지 않으며 멱등은 그것까지 고려하지 않는다.
+
+<br>
+
+### 안전(Safe)
+- 호출해도 리소스를 변경하지 않는다.(GET, HEAD)
+
+<br>
+
+### Cacheable(캐시가능)
+   - 응답 결과 리소스를 캐시해서 사용해도 되는가?
+   - GET, HEAD, POST, PATCH 캐시 가능하다.
+   - 실제 GET, HEAD 정도만 캐시로 사용한다.
+   - POST, PATCH는 본문 내용까지 캐시 키로 고려해야 하는데, 이는 구현하기가 쉽지 않다.
 
 
 
