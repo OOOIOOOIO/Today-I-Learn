@@ -76,6 +76,164 @@
 <br>
 
 # HTTP 헤더
+- HTTP 전송에 필요한 모든 부가 정보를 담고있다.
+   - 메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트, 서버 정보, 캐시 관리 정보
+- 필요시 임의의 헤더 추가 가능
+
+<br>
+
+![HTTP 헤더 RFC2616](https://user-images.githubusercontent.com/74396651/178652535-452063dd-0159-486a-85dc-24944afe8732.png)
+
+<br>
+
+![HTTP 헤더 RFC2616](https://user-images.githubusercontent.com/74396651/178652561-d64abf67-eb4c-41ed-8a89-ea420dc52b14.png)
+
+<br>
+
+![표현](https://user-images.githubusercontent.com/74396651/178652804-7fc9a968-fe68-48b4-abc7-eb5fe958c97c.png)
+
+<br>
+
+- ## Content-Type :표현 데이터의 형식 설명
+   - text/html
+   - application/json 
+   - image/png ...
+
+- ## Content-Encoding : 표현 데이터의 자연 언어
+   - ko
+   - en
+   - en-US
+
+- ## Content-Length
+   - 바이트 단위
+   - Transfer-Encoding(전송 코딩)을 사용하면 Content-Length를 사용하면 안된다.
+
+
+## 협상(콘텐츠 네고시에이션) : 클라이언트가 선호하는 표현 요청
+- Accept : 클라이언트가 선호하는 미디어 타입 전달
+- Accept-Charset : 클라이언트가 선호하는 문자 인코딩
+- Accept-Encoding : 클라이언트가 선호하는 압축 인코딩
+- Accept-Language : 클라이언트가 선호하는 자연 언어
+
+- ### 협상 헤더는 요청시에만 사용한다!
+
+<br>
+
+## 협상과 우선순위
+- Quality Values(q) 값 사용한다.
+- 0~1, 클수록 높은 우선순위이다. 만약 생략하면 1이다.
+   - <code>Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7</code>
+    
+<br>
+
+![숫자로](https://user-images.githubusercontent.com/74396651/178653593-0063e07c-25db-47bd-a8d2-0c615674c207.png)
+
+<br>
+
+- 구체적인 것이 우선한다.
+   - <code>Accept: text/*, text/plain, text/plain;format=flowed, */*</code>
+
+<br>
+
+![image](https://user-images.githubusercontent.com/74396651/178653990-07f248d5-5c4a-4ccd-b9fb-a123dd4fb550.png)
+
+<br>
+
+- 구체적인 것을 기준으로 미디어 타입을 맞춘다.
+   - <code>Accept: text/*;q=0.3, text/html;q=0.7, text/html;level=1,text/html;level=2;q=0.4, */*;q=0.5</code>
+
+![image](https://user-images.githubusercontent.com/74396651/178654591-2587c477-9c8a-4af0-9f38-702edc22084e.png)
+
+
+<br>
+
+## 전송 방식
+
+<br>
+
+![image](https://user-images.githubusercontent.com/74396651/178654778-3582d37d-eefb-4a13-92c4-2ba1a6d5e741.png)
+
+<br>
+
+![image](https://user-images.githubusercontent.com/74396651/178654818-31986913-e020-4137-a701-2cc585193704.png)
+
+<br>
+
+![image](https://user-images.githubusercontent.com/74396651/178654836-62288b23-d181-4bf8-be9a-95423ed78e2f.png)
+
+<br>
+
+![image](https://user-images.githubusercontent.com/74396651/178654856-e6acb23b-c05e-4a36-9548-79acf17123de.png)
+
+<br>
+
+![image](https://user-images.githubusercontent.com/74396651/178654872-eee69531-2ff2-4f41-b110-cf15700f8f2a.png)
+
+<br>
+
+## Header 일반정보
+
+- From : 유저 에이전트의 이메일 정보
+   - 일반적으로 잘 사용되지 않는다.
+   - 검색 엔진 같은 곳에서 주로 사용한다.
+   - 요청에서 사용한다. 
+
+- Referer : 이전 웹 페이지 주소
+   - 현재 요청된 페이지의 이전 웹 페이지 주소
+   - A -> B로 이동하는 경우 B를 요청할 때 Referer: A를 포함해서 요청한다.
+   - Referer를 사용해서 유입 경로 분석이 가능하다.
+   - 요청에서 사용한다.
+   - referrer의 오타다(웃김)
+
+- User-Agent : 유저 에이전트 애플리케이션 정보
+   - <code>user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36</code>
+   - 클라이언트의 애플리케이션 정보(웹 브라우저 정보, ...)
+   - 통계 정보
+   - 어떤 종류의 브라우저에서 장애가 발생하는지 파악 가능하다.
+   - 요청에서 사용한다.
+
+- Server : 요청을 처리하는 오리진 서버의 소프트웨어 정보
+   - <code>Server: Apache/2.2.22(Debian)</code>
+   - server: nginx 처럼 정보를 보여준다.
+   - 응답에서 사용한다.
+
+- Date : 메세지가 생성된 날짜
+   - <code>Date: Tue, 15 Nov 1994 08:12:31 GMT</code>
+   - 응답에서 사용한다.
+
+<br>
+
+## Header 특별정보
+- Host: 요청한 호스트 정보(도메인)
+   - 요청에서 사용하며 필수다!
+   - 하나의 서버거 여러 도메인을 처리해야 할 때
+   - 하나의 IP 주소에 여러 도메닝 적용되어 있을 때
+
+- Location: 페이지 리다이렉션
+   - 웹 브라우저는 3xx 응답의 결과에 Location 헤더가 있으면, Location 위치로 자동 이동한다.(리다이렉션)
+   - 응답코드 3xx에서 설명한다.
+   - 201(Created) : Location 값은 요청에 의해 생성된 리소스 URI이다.
+   - 3xx (Redirection) : Location 값은 요청을 자동으로 리다이렉션하기 위한 대상 리소스를 가리킨다.
+
+- Allow: 허용 가능한 HTTP 메서드
+   - 405(Method Not Allowed)에서 응답에 포함해야 한다.
+   - Allow : GET, HEAD, PUT
+
+- Retry-After: 유저 에이전트가 다음 요청을 하기까지 기다려야 하는 시간
+   - 503(Service Unavailable) : 서비스가 언제까지 불능인지 알려줄 수 있다.
+   - Retry-After: Fri, 31 Dec 1999 23:59:59 GMT (날짜 표기)
+   - Retry-After: 120 (초단위 표기)
+
+<br>
+
+## 인증
+- Authorization : 클라이언트 인증 정보를 서버에 전달
+   - Autorization : Basic xxxxxxxxxxx 이런가보당
+   
+- WWW-Authenticate : 리소스 접근 시 필요한 인증 방법 정의
+   - 리소스 접근시 필요한 인증 방법 정의
+   - 401 Unauthorized 응답과 함께 사용
+   -  WWW-Authenticate: Newauth realm="apps", type=1, title="Login to \"apps\"", Basic realm="simple"
 
 <br>
 <hr>
