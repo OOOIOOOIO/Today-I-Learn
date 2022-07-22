@@ -8,7 +8,6 @@
 - ## HTTP Method
 - ## HTTP Response
 - ## HTTP Error
-- 
 
 
 # HTTP(HyperText Transfer Protocol)
@@ -234,6 +233,12 @@
    - 리소스 접근시 필요한 인증 방법 정의
    - 401 Unauthorized 응답과 함께 사용
    -  WWW-Authenticate: Newauth realm="apps", type=1, title="Login to \"apps\"", Basic realm="simple"
+
+<br>
+   
+## Cache와 조건부 요청
+
+
 
 <br>
 <hr>
@@ -554,7 +559,22 @@ DELETE /polite/1998
    - Retry-After 헤더 필드로 얼마 뒤에 복구되는지 보낼 수도 있다.
 
 
+<br>
+
+## PRG
 
 
+![전체흐름](https://user-images.githubusercontent.com/74396651/180393747-2ff332fd-bb1a-4f56-b63d-ec1ad17c9f44.png)
+
+![Post](https://user-images.githubusercontent.com/74396651/180393846-8c96f99f-1819-4b22-9170-88b3bcfc03fe.png)
+- 상품 저장 후 그냥 Get으로
+
+![image](https://user-images.githubusercontent.com/74396651/180394015-adeb4b93-9e59-4fb5-bac9-1c484f698c73.png)
+- 상품 저장 후 redirect로
 
 
+<br>
+<hr>
+<br>
+
+## HTTP Cache
