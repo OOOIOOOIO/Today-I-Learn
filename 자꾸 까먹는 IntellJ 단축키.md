@@ -20,4 +20,7 @@
 
 - 에러 해결 추천(throws ~, import static 등등)
    - Alt + Enter
+
+- 테스트 클래스 작성
+   - 클래스명에 커서 올리고 Ctrl + T
    
