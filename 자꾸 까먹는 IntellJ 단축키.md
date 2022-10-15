@@ -18,6 +18,6 @@
 - 추천
    - Ctrl + Space
 
-- 에러 해결 추천
+- 에러 해결 추천(throws ~, import static 등등)
    - Alt + Enter
    
