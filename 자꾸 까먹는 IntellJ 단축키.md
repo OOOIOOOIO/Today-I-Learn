@@ -29,3 +29,12 @@
 
 - 기능 찾기
    - Ctrl + Shift + A  
+
+- 클래스 컴파일
+   - Ctrl + Shitf + F10
+
+- 실행
+   - Shift + F10 
+
+- 결과값 변수 자동 생성
+   - Ctrl + Alt + V
