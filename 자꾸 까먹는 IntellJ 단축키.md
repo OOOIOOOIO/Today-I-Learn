@@ -1,12 +1,18 @@
 # 으 이클립스랑 헷갈린다!
 
-- try-catch
+- 새 파일 or Getter & Setter ... 생성
+   - Alt + Insert
+
+- Override 메서드 생성  
+   - Ctrl + O
+
+- try-catch, if-else, for, while ...
    - 커서 올려놓고 Ctrl + Alt + T
 
 - 한 줄 삭제
    - Ctrl + Y
 
-- 한 줄 복제
+- 한 줄, 다중 복제
    - Ctrl + D
 
 - 괄호 빠져나오기
@@ -38,3 +44,6 @@
 
 - 결과값 변수 자동 생성
    - Ctrl + Alt + V
+
+- 코드 옮기기
+   - Ctrl + Shift + 방향키 
