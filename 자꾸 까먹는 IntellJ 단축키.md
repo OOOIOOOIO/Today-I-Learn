@@ -24,3 +24,8 @@
 - 테스트 클래스 작성
    - 클래스명에 커서 올리고 Ctrl + T
    
+- 전체화면(Tool 바)
+   - Ctrl + Shift + F12
+
+- 기능 찾기
+   - Ctrl + Shift + A  
