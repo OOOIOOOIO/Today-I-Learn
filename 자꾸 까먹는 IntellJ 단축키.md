@@ -3,6 +3,8 @@
 - 새 파일 or Getter & Setter ... 생성
    - Alt + Insert
 
+- static import
+   - Assertions.assertThat : tions여기.ass~ 에 커서 놓고 Alt + Enter
 - Override 메서드 생성  
    - Ctrl + O
 
