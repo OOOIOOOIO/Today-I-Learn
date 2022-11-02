@@ -1,4 +1,4 @@
-# Blocking과 Non-blocking
+# Blocking과 Non-Blocking
 > &nbsp;내가 결과를 기다리는 대상을 어떻게 다룰 것이냐에 대한 주제이다.
 
 ## Blocking(블로킹)
@@ -8,7 +8,7 @@
 
 - 이렇게 블로킹은 요청에 대한 결과가 올 때까지 쓰레드는 아무것도 하지 못하고 대기하기 된다.(무조건 대기!)
 
-## Non-blocking
+## Non-Blocking
 > &nbsp;논블로킹에선 결과를 기다리지 않고 바로 종료된다. 요청에 대한 응답을 기다리지 않고, 다음 작업을 바로 수행할 수 있게 되는 것이다.
 
 ![image](https://user-images.githubusercontent.com/74396651/199521224-52ab0d3e-76ff-4c05-9011-9946e20fa47d.png)
