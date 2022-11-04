@@ -68,4 +68,5 @@ ResponseEntity<Long> responseEntity = this.testRestTemplate.exchange(url, HttpMe
    - TestRestTemplate은 클라이언트 입장에서 RestTemplate을 사용하듯이 테스트하는 것이다.
 
 
-
+# 참조
+https://enterkey.tistory.com/275
