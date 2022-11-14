@@ -1,7 +1,8 @@
 # TDD(Test-driven development)
 
 ![image](https://user-images.githubusercontent.com/74396651/194557709-1283dc4c-8685-4634-996b-3099676df2c6.png)
-
+> &nbsp; TDD는 테스트를 먼저 작성하고 이를 통과하기 위한 행동들이 개발을 주도하는 것을 목표로 한다.
+> TDD는 Kent Beck이 고안해낸 방법론이다!
 
 # 테스트 코드 작성의 이점
 - 단위 테스트는 개발단계 초기에 문제를 발견하게 도와준다.
