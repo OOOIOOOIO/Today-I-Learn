@@ -52,3 +52,9 @@
 
 - 여러줄 편집
    - Alt + 마우스 
+
+- 코드 인라인
+   - Ctrl + Alt + N
+
+- 리팩터링
+   - Ctrl + Alt + Shift + T
