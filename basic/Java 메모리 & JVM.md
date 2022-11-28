@@ -3,7 +3,7 @@
 - 모든 자바 프로그램은 자바 가상 머신(JVM)을 통해서 실행됩니다.
 - 자바 프로그램이 실행되면, JVM은 운영 체제로부터 해당 프로그램을 수행할 수 있도록 필요한 메모리를 할당받습니다.
 - 이렇게 할당받은 메모리를 JVM은 용도에 따라 다음과 같이 구분하여 관리합니다.
-- Thread는 각자의 stack 영역을 제외한 메모리 영역(Heap 영역)을 공유한다(멀티 쓰레드). 이 때문에! 동시성 문제가 발생하고 Thread Local을 사용한다.
+- Java Thread는 각자의 stack 영역을 제외한 메모리 영역(Method, Heap 영역)을 공유한다(멀티 쓰레드). 이 때문에! 동시성 문제가 발생하고 Thread Local을 사용하며 Thread Safe하게 설계해야 한다!
 
 ![image](https://user-images.githubusercontent.com/74396651/197968889-7fb14e9c-2bc2-4f2f-b8ee-a811beb45443.png)
 
