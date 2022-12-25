@@ -8,11 +8,14 @@
    - use mysql;
    - select host, user, plugin from user;
 
-- ### 사용자 추가
-   - create  user 사용자ID@호스트(localhost) identified by '비밀번호'; 
-   - create  user 사용자ID@% identified by '비밀번호'; --> 기존 사용자의 외부에서 접근을 허용
+![image](https://user-images.githubusercontent.com/74396651/209483878-eeca57a3-ac12-4d1a-925f-a8018bd4eb46.png)
 
-- ### 사용자 삭제
+
+- ### 사용자 추가
+   - create  user 사용자ID@'호스트(localhost)' identified by '비밀번호'; 
+   - create  user 사용자ID@'%' identified by '비밀번호'; --> 기존 사용자의 외부에서 접근을 허용
+
+- ### 사용자 삭제 -> drop 사용하기
    - delete from user where user ='사용자ID';
 
 - ### DataBase 목록 보기
@@ -25,7 +28,7 @@
    - drop database DB명;
 
 - ### DataBase 사용
-   - user databse명;
+   - use databse명;
 
 <br>
 <hr>
@@ -43,23 +46,23 @@
 <br>
 - ### 계정이 존재한다면 identified by X
 - ### 계정이 이미 존재 하는데 'identified by '비밀번호' 부분을 추가하면 비밀번호가 변경된다
-   - GRANT ALL PRIVILEGES ON DB명.테이블 TO 계정아이디@host IDENTIFIED BY '비밀번호';
-   - GRANT ALL privileges ON DB명.* TO 계정아이디@locahost IDENTIFIED BY '비밀번호';
+   - GRANT ALL PRIVILEGES ON DB명.테이블 TO 계정아이디@'host' IDENTIFIED BY '비밀번호';
+   - GRANT ALL privileges ON DB명.* TO 계정아이디@'locahost' IDENTIFIED BY '비밀번호';
    - GRANT ALL privileges ON DB명.* TO 계정아이디@'%' IDENTIFIED BY '비밀번호';
    - grant all privileges on DB명.* to userid@'%' identified by '비밀번호' ; 
 
 
 - ### user 에게 test 데이터베이스 모든 테이블에 대한 권한 부여 및 비밀번호 변경
-  - grant all privileges on test.* to userid@localhost identified by '비밀번호';
+  - grant all privileges on test.* to userid@'localhost' identified by '비밀번호';
 
 - ### user 에게 test 데이터베이스 모든 테이블에 select, insert, update 권한 부여
-   - grant select, insert, update on test.* to user@localhost identified by '비밀번호';
+   - grant select, insert, update on test.* to user@'localhost' identified by '비밀번호';
 
 - ### user 에게 test 데이터베이스 모든 테이블에 select, insert, update 권한 부여
-   - grant select, insert, update on test.* to user@localhost;   -- 패스워드는 변경없이 권한만 부여하는 경우
+   - grant select, insert, update on test.* to user@'localhost';   -- 패스워드는 변경없이 권한만 부여하는 경우
 
 - ### user 에게 모든 데이터베이스 모든 테이블에 권한 부여// 전역 권한은 모두 광범위한 보안문제가 수반되므로 권한을 허용하는 경우 신중해야 함
-   - grant all privileges on *.* to user@localhost identified by '비밀번호' with grant option;
+   - grant all privileges on *.* to user@'localhost' identified by '비밀번호' with grant option;
 
 - ### 변경된 내용을 메모리에 반영(권한 적용)
    - flush privileges;     
@@ -67,7 +70,10 @@
 <hr>
 
 # 사용자 권한 확인
-- show grants for 사용자Id@localhost or % or 특정 ip
+- show grants for 사용자Id@'localhost or %' or 특정 ip
+
+![image](https://user-images.githubusercontent.com/74396651/209483870-6f410c47-e828-4807-99af-194607dc1b4f.png)
+
 
 # 사용자 권환 제거 및 계정 삭제
 - ### 모든 권한 삭제
