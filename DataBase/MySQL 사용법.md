@@ -86,6 +86,14 @@
 <hr>
 <br>
 
+## 간단한 생성 순서
+1. create user testid@'localhost or % or ip주소' identified by '비밀번호';
+2. create database testdb;
+3. grant all or ? privileges on testdb.* or ? to testid@'localhost or % or ip주소';
+4. flush privileges;
+5. 이후 workbench가서 connection 생성
+
+<hr>
 
 ## cmd 창에서 사용자와 db 만들고 workbench로 가서 connection 생성해주면 된다
 
