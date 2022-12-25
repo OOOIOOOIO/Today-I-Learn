@@ -41,7 +41,7 @@
 - host에 '200.100.100.50' 으로 하면 IP주소가 200.100.100.50 인 곳에서만 원격 접속을 허용한다.
 
 <br>
-
+- ### 계정이 존재한다면 identified by X
 - ### 계정이 이미 존재 하는데 'identified by '비밀번호' 부분을 추가하면 비밀번호가 변경된다
    - GRANT ALL PRIVILEGES ON DB명.테이블 TO 계정아이디@host IDENTIFIED BY '비밀번호';
    - GRANT ALL privileges ON DB명.* TO 계정아이디@locahost IDENTIFIED BY '비밀번호';
@@ -63,6 +63,8 @@
 
 - ### 변경된 내용을 메모리에 반영(권한 적용)
    - flush privileges;     
+
+<hr>
 
 # 사용자 권한 확인
 - show grants for 사용자Id@localhost or % or 특정 ip
