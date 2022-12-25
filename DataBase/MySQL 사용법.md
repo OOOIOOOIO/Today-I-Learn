@@ -88,3 +88,7 @@
 
 
 ## cmd 창에서 사용자와 db 만들고 workbench로 가서 connection 생성해주면 된다
+
+## 만약 외부 접속 시 C:\ProgramData\MySQL\MySQL Server 8.0 에 있는 my.ini에 bind-address=0.0.0.0 추가
+
+## MySQL Workbench의 host에 원격주소!
