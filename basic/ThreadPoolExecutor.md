@@ -115,14 +115,18 @@ public class WebServer {
     }
 }
 ```
+
 ![image](https://user-images.githubusercontent.com/74396651/212261374-b9a66761-f545-4621-8d15-835e85462037.png)
 
 
 ## RejectedExcutionHandler handler
 - 작업 요청 거부 시 처리할 핸들러
    
+<br>
+<br>
+<br>
    
-[참고1](https://vsh123.github.io/os/thread-pool/)
+[참고1](https://vsh123.github.io/os/thread-pool/)<br>
 [참고2](https://keichee.tistory.com/388)
 
   
