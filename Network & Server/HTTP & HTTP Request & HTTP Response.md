@@ -1,16 +1,4 @@
-# 목차
-
-- ## HTTP 개념
-- ## HTTP 작동방식
-- ## HTTP 속성
-- ## HTTP 헤더
-- ## HTTP Request
-- ## HTTP Method
-- ## HTTP Response
-- ## HTTP Error
-
-
-# HTTP(HyperText Transfer Protocol)
+# HTTP 개념(HyperText Transfer Protocol)
 
 <br>
 
