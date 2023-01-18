@@ -143,21 +143,116 @@
 
 ## Single Thread(Thread 클래스 상속)
 ```java
+package com.example.demo.threadTest;
+
+public class ThreadTest1 extends Thread {
+
+    private int[] temp;
+
+    public ThreadTest1(String threadName) {
+
+        /*
+            Thread 이름!!
+            public Thread(String name) {
+                this(null, null, name, 0);
+            }
+         */
+        super(threadName);
+        temp = new int[10];
+
+        for (int start = 0; start < temp.length; start++) {
+            temp[start] = start;
+        }
+    }
+
+    @Override
+    public void run() {
+        for (int start : temp) {
+            try {
+                Thread.sleep(1000);
+
+            } catch (InterruptedException interruptedException) {
+                interruptedException.printStackTrace();
+
+            }
+            System.out.println("Thread Name : " + currentThread().getName());
+            System.out.println("temp value : " + start);
+        }
+    }
+
+    public static void main(String[] args) {
+        ThreadTest1 tt1 = new ThreadTest1("첫번째"); // new Therad(String name)
+        tt1.start();
+    }
+}
+
 ```
+
+![image](https://user-images.githubusercontent.com/74396651/213122127-2eeee246-5423-421f-8b1d-dfcaff825b62.png)
 
 <hr>
 
 ## Single Thread(Runnable 인터페이스 상속, Thread 클래스 상속보다 많이 쓰인다.)
 ```java
+package com.example.demo.threadTest;
+
+public class ThreadTest2 implements Runnable{
+
+    private int[] temp;
+
+    public ThreadTest2(){
+        temp = new int[10];
+
+        for (int start = 0; start < temp.length; start++) {
+            temp[start] = start;
+        }
+    }
+
+    @Override
+    public void run() {
+
+        for (int start : temp) {
+            try {
+                Thread.sleep(1000);
+
+            } catch (InterruptedException interruptedException) {
+                interruptedException.printStackTrace();
+            }
+
+            System.out.println("쓰레드 이름 : " + Thread.currentThread().getName());
+            System.out.println("temp value : " + start);
+        }
+    }
+
+    public static void main(String[] args) {
+        ThreadTest2 tt2 = new ThreadTest2();
+        Thread t = new Thread(tt2, "첫번쨰"); // new Thread(Runnable target, String name)
+
+        t.start();
+    }
+}
+
 ```
+
+![image](https://user-images.githubusercontent.com/74396651/213122965-3f3776dc-142c-48fa-a12d-845779b350d7.png)
 
 <hr>
 
 ## Multi Thread-1
 ```java
+
 ```
 
 <hr>
 
 ## Multi Thread-2
+```java
+
+```
+
+<br>
+<hr>
+<br>
+
+[참고](https://coding-factory.tistory.com/279)
 
