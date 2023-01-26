@@ -200,7 +200,7 @@ public interface Math {
 
 # Functional Interface  예제
 - 익명 객체를 람다식으로 대체 가능한 이유
-	 - 인터페이스를 구현한 익명 객체의 메서드와 람다식의 매개변수 타입과 개수 그리고 반환값이 일치하기 때문에 대체 가능하다.
+   - 인터페이스를 구현한 익명 객체의 메서드와 람다식의 매개변수 타입과 개수 그리고 반환값이 일치하기 때문에 대체 가능하다.
 
 ```java
 public class Lamda_공부 {
@@ -235,6 +235,109 @@ public class Lamda_공부 {
 <br>
 <hr>
 <br>
+
+## java.util.function 패키지
+> 자바에서는 자주 사용되는 함수형 인터페이스들을 'java.util.function' 패키지에 미리 정의해 놓았다. 이 패키지에 정의된 인터페이스를 사용하고 만약 없을 경우 정의해서 사용하는 게 좋다.
+
+<br>
+
+### 함수형 인터페이스
+
+
+```
+
+< 자주 사용하는 타입인자 >
+
+<T> : Type
+<E> : Element
+<K> : Key
+<N> : Number
+<V> : Value
+<R> : Result
+
+======================
+
+< 형식 : 함수형 인터페이스 : 메서드 >
+
+# 기본적인 함수형 인터페이스
+
+- java.lang.Runnable : void run();
+- Supplier<T> : T get();
+- Consummer<T> : void accept(T t);
+- Function<T, R> : R apply(T t);
+- Predicate<T> : boolean test(T t);
+
+
+# 파라미터가 두 개인 함수형 인터페이스
+
+- BiConsumer<T, U> : void accept(T t, U u);
+- BiPredicate<T, U> : boolean test(T t, U u);
+- BiFunction<T, U, R> : R apply(T t, U u);
+
+@ 파라미터가 3개 이상인 함수형 인터페이스의 경우 직접 정의하여 사용해야 한다. 
+
+# 하나의 파라미터를 받고 동일한 타입을 리턴하는 함수형 인터페이스
+
+- UnaryOperator<T> : T apply(T t);
+- BinaryOperator<T> : T apply(T t1, T t2);
+
+
+
+@ 대부분 람다식은 단순하기 때문에 두 개의 파라미터만으로도 충분히 정의가 되기 때문에 패키지에 대부분 포함되어 있다.
+
+===================
+
+@ 제네릭을 사용하는 함수형 인터페이스는 기본형(Primitive Type)을 사용할 때, 랩퍼(Wrapper) 클래스를 사용해야하는 비효율이 있다.
+@ 따라서 기본형(Primitive Type)을 사용하는 함수형 인터페이스들도 제공된다.
+
+# 기본형(Primitive Type)을 사용하는 함수형 인터페이스
+
+- IntFunction<R> : R apply(int value);
+- LongFunction<R> : R apply(long value);
+- DoubleFunction<R> : R apply(double value);
+
+- ToIntFunction<T> : int applyAsInt(T t)
+- ToLonFunction<T> : long applyAsLong(T t)
+- ToDoubleFunction<T> : double applyAsDouble(T t)
+
+@ 함수형 인터페이스의 이름을 살펴보면 어떤 기본 타입과 연관되어 있는지 알 수 있다. 이 밖에도 IntTolongFunction, DoubleToIntFunction, ObjIntConsumer<T> 등도 존재한다.
+
+===================
+
+# 컬렉션과 함께 사용할 수 있는 함수형 인터페이스
+
+< 형식 : 인터페이스 | 메서드 : 설명 >
+
+- Collection | boolean removeIf(Perdicate<E> filter); : 조건에 맞는 엘리먼트 삭제
+- List | void replaceAll(UnaryOperator<E> operator); : 모든 엘리먼트에 operator를 적용하여 대체(replace)
+- Iterable | void forEach(Consumer<T> action); : 모든 엘리먼트에 action 수행
+- Map | V compute(K key, BiFunction<K, V, V> f); : 지정된 키에 해당하는 값에 f를 수행
+- Map | V computeIfAbsent(K key, Function<K, V> f); : 지정된 키가 없으면 f 수행 후 추가
+- Map | V computeIfPresent(K key, BiFunction<K, V, V> f); : 지정된 키가 있을 때, f 수행
+- Map | V merge(K key, V value, BiFunction<V, V, V> f); : 모든 엘리먼트에 Merge 작업 수행, 키에 해당하는 값이 있으면 f를 수행해 병합 후 할당
+- Map | void forEach(BiConsumer<K, V> action); : 모든 엘리먼트에 action 수행
+- Map | void replaceAll(BiFunction<K, V, V> f); : 모든 엘리먼트에 f 수행 후 대체
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
