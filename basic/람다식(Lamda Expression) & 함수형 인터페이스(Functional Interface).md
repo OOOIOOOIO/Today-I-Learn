@@ -241,11 +241,9 @@ public class Lamda_공부 {
 
 <br>
 
-### 함수형 인터페이스
-
+## 함수형 인터페이스
 
 ```
-
 < 자주 사용하는 타입인자 >
 
 <T> : Type
@@ -254,76 +252,118 @@ public class Lamda_공부 {
 <N> : Number
 <V> : Value
 <R> : Result
-
-======================
-
-< 형식 : 함수형 인터페이스 : 메서드 >
-
-# 기본적인 함수형 인터페이스
-
-- java.lang.Runnable : void run();
-- Supplier<T> : T get();
-- Consummer<T> : void accept(T t);
-- Function<T, R> : R apply(T t);
-- Predicate<T> : boolean test(T t);
-
-
-# 파라미터가 두 개인 함수형 인터페이스
-
-- BiConsumer<T, U> : void accept(T t, U u);
-- BiPredicate<T, U> : boolean test(T t, U u);
-- BiFunction<T, U, R> : R apply(T t, U u);
-
-@ 파라미터가 3개 이상인 함수형 인터페이스의 경우 직접 정의하여 사용해야 한다. 
-
-# 하나의 파라미터를 받고 동일한 타입을 리턴하는 함수형 인터페이스
-
-- UnaryOperator<T> : T apply(T t);
-- BinaryOperator<T> : T apply(T t1, T t2);
-
-
-
-@ 대부분 람다식은 단순하기 때문에 두 개의 파라미터만으로도 충분히 정의가 되기 때문에 패키지에 대부분 포함되어 있다.
-
-===================
-
-@ 제네릭을 사용하는 함수형 인터페이스는 기본형(Primitive Type)을 사용할 때, 랩퍼(Wrapper) 클래스를 사용해야하는 비효율이 있다.
-@ 따라서 기본형(Primitive Type)을 사용하는 함수형 인터페이스들도 제공된다.
-
-# 기본형(Primitive Type)을 사용하는 함수형 인터페이스
-
-- IntFunction<R> : R apply(int value);
-- LongFunction<R> : R apply(long value);
-- DoubleFunction<R> : R apply(double value);
-
-- ToIntFunction<T> : int applyAsInt(T t)
-- ToLonFunction<T> : long applyAsLong(T t)
-- ToDoubleFunction<T> : double applyAsDouble(T t)
-
-@ 함수형 인터페이스의 이름을 살펴보면 어떤 기본 타입과 연관되어 있는지 알 수 있다. 이 밖에도 IntTolongFunction, DoubleToIntFunction, ObjIntConsumer<T> 등도 존재한다.
-
-===================
-
-# 컬렉션과 함께 사용할 수 있는 함수형 인터페이스
-
-< 형식 : 인터페이스 | 메서드 : 설명 >
-
-- Collection | boolean removeIf(Perdicate<E> filter); : 조건에 맞는 엘리먼트 삭제
-- List | void replaceAll(UnaryOperator<E> operator); : 모든 엘리먼트에 operator를 적용하여 대체(replace)
-- Iterable | void forEach(Consumer<T> action); : 모든 엘리먼트에 action 수행
-- Map | V compute(K key, BiFunction<K, V, V> f); : 지정된 키에 해당하는 값에 f를 수행
-- Map | V computeIfAbsent(K key, Function<K, V> f); : 지정된 키가 없으면 f 수행 후 추가
-- Map | V computeIfPresent(K key, BiFunction<K, V, V> f); : 지정된 키가 있을 때, f 수행
-- Map | V merge(K key, V value, BiFunction<V, V, V> f); : 모든 엘리먼트에 Merge 작업 수행, 키에 해당하는 값이 있으면 f를 수행해 병합 후 할당
-- Map | void forEach(BiConsumer<K, V> action); : 모든 엘리먼트에 action 수행
-- Map | void replaceAll(BiFunction<K, V, V> f); : 모든 엘리먼트에 f 수행 후 대체
-
-
-
 ```
 
+<hr>
+
+<code>형식 : 함수형 인터페이스 : 메서드</code>
+
+### 기본적인 함수형 인터페이스
+
+- java.lang.Runnable : void run();
+- Supplier&lt;T&gt; : T get();
+- Consummer&lt;T&gt; : void accept(T t);
+- Function&lt;T, R&gt; : R apply(T t);
+- Predicate&lt;T&gt; : boolean test(T t);
+
+<hr>
+
+### 파라미터가 두 개인 함수형 인터페이스
+
+- BiConsumer&lt;T, U&gt; : void accept(T t, U u);
+- BiPredicate&lt;T, U&gt; : boolean test(T t, U u);
+- BiFunction&lt;T, U, R&gt; : R apply(T t, U u);
+
+> 파라미터가 3개 이상인 함수형 인터페이스의 경우 직접 정의하여 사용해야 한다. 
+
+<hr>
+
+### 하나의 파라미터를 받고 동일한 타입을 리턴하는 함수형 인터페이스
+
+- UnaryOperator&lt;T&gt; : T apply(T t);
+- BinaryOperator&lt;T&gt; : T apply(T t1, T t2);
+
+> 대부분 람다식은 단순하기 때문에 두 개의 파라미터만으로도 충분히 정의가 되기 때문에 패키지에 대부분 포함되어 있다.
+
+<hr>
+
+> 제네릭을 사용하는 함수형 인터페이스는 기본형(Primitive Type)을 사용할 때, 랩퍼(Wrapper) 클래스를 사용해야하는 비효율이 있다.
+> 따라서 기본형(Primitive Type)을 사용하는 함수형 인터페이스들도 제공된다.
+
+### 기본형(Primitive Type)을 사용하는 함수형 인터페이스
+
+- IntFunction&lt;R&gt; : R apply(int value);
+- LongFunction&lt;R&gt; : R apply(long value);
+- DoubleFunction&lt;R&gt; : R apply(double value);
+
+<br>
+
+- ToIntFunction&lt;T&gt; : int applyAsInt(T t)
+- ToLonFunction&lt;T&gt; : long applyAsLong(T t)
+- ToDoubleFunction&lt;T&gt; : double applyAsDouble(T t)
+
+> 함수형 인터페이스의 이름을 살펴보면 어떤 기본 타입과 연관되어 있는지 알 수 있다. 이 밖에도 IntTolongFunction, DoubleToIntFunction, ObjIntConsumer&lt;T&gt; 등도 존재한다.
+
+<hr>
+
+### 컬렉션과 함께 사용할 수 있는 함수형 인터페이스
+
+<code>형식 : 인터페이스 | 메서드 : 설명</code>
+
+- Collection | boolean removeIf(Perdicate&lt;E&gt; filter); : 조건에 맞는 엘리먼트 삭제
+- List | void replaceAll(UnaryOperator&lt;E&gt; operator); : 모든 엘리먼트에 operator를 적용하여 대체(replace)
+- Iterable | void forEach(Consumer&lt;T&gt; action); : 모든 엘리먼트에 action 수행
+- Map | V compute(K key, BiFunction&lt;K, V, V&gt; f); : 지정된 키에 해당하는 값에 f를 수행
+- Map | V computeIfAbsent(K key, Function&lt;K, V&gt; f); : 지정된 키가 없으면 f 수행 후 추가
+- Map | V computeIfPresent(K key, BiFunction&lt;K, V, V&gt; f); : 지정된 키가 있을 때, f 수행
+- Map | V merge(K key, V value, BiFunction&lt;K, V, V&gt; f); : 모든 엘리먼트에 Merge 작업 수행, 키에 해당하는 값이 있으면 f를 수행해 병합 후 할당
+- Map | void forEach(BiConsumer&lt;K, V&gt; action); : 모든 엘리먼트에 action 수행
+- Map | void replaceAll(BiFunction&lt;K, V, V&gt; f); : 모든 엘리먼트에 f 수행 후 대체
 
 
+
+<br>
+<hr>
+<br>
+
+## Function의 합성
+
+![image](https://user-images.githubusercontent.com/74396651/214798118-227d6b93-15ed-46aa-b4dc-e9da217faa36.png)
+
+<br>
+
+### 함수의 합성을 지원하는 디폴트 메서드
+
+- default &lt;V&gt; Function &lt;T, V&gt; andThen (Function &lt;? super R, ? extends V&gt; after);
+- default &lt;V&gt; Function &lt;V, R&gt; compose (Function &lt;? super V, ? extends V&gt; before);
+- static &lt;V&gt; Function &lt;T, T&gt; identity();
+
+> f.andThen(g)를 수행하면 f 함수를 실행한 결과 값을 다시 g 함수의 인자로 전달하여 결과를 얻는 새로운 함수를 만들어 낸다. 이 때, f함수의 리턴 타입이 g 함수의 파라미터 타입과 호환되어야 한다.<br>
+> 반대로 f.compose(g)를 수행할 경우 g 함수르 먼저 적용하고 f를 나중에 적용하는 함수를 만들어 낸다. 마찬가지로 먼저 적용되는 함수 g의 리턴 타입과 나중에 적용되는 함수 f의 파라미터 타입이 맞아야 한다.<br>
+> identity 메소드는 "항등함수"를 만들어 낼 때 사용된다. 항등함수는 잘 사용되는 편은 아니며 Stream의 map()으로 변환 작업할 때 변환 없이 그래도 처리하는 경우에 사용된다.
+
+
+<br>
+<hr>
+<br>
+
+## Predicate 결합
+
+![image](https://user-images.githubusercontent.com/74396651/214800968-1b20bba2-29d0-4940-8248-fce5399a56a4.png)
+
+<br>
+
+### Prediate을 결합할 때 사용하는 디폴트 메소드
+
+- default Predicate&lt;T&gt; and (Predicate&lt;? super T&gt; other);
+- default Predicate&lt;T&gt; or (Predicate&lt;? super T&gt; other);
+- default Predicate&lt;T&gt; negate();
+- static &lt;T&gt; Predicate&lt;T&gt; isEqual(Object targetRef);
+- 예시
+```java
+Predicate<Integer> greater = x -> x > 10;
+Predicate<Integer>
+```
 
 
 
