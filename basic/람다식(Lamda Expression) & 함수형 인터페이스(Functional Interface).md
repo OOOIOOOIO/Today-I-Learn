@@ -243,36 +243,48 @@ public class Lamda_공부 {
 
 ## 함수형 인터페이스
 
-```
-< 자주 사용하는 타입인자 >
 
-<T> : Type
-<E> : Element
-<K> : Key
-<N> : Number
-<V> : Value
-<R> : Result
-```
+<code> 자주 사용하는 타입인자 </code>
+
+- &lt;T&gt : Type of first argument
+- &lt;U&gt : Type of second argument
+- &lt;E&gt : Element
+- &lt;K&gt : Key
+- &lt;N&gt : Number
+- &lt;V&gt : Value
+- &lt;R&gt : Type of result of the function
 
 <hr>
 
-<code>형식 : 함수형 인터페이스 : 메서드</code>
+<code> 형식 </code>
+- 함수형 인터페이스 
+- 메서드
+
+<hr>
 
 ### 기본적인 함수형 인터페이스
 
-- java.lang.Runnable : void run();
-- Supplier&lt;T&gt; : T get();
-- Consummer&lt;T&gt; : void accept(T t);
-- Function&lt;T, R&gt; : R apply(T t);
-- Predicate&lt;T&gt; : boolean test(T t);
+- java.lang.Runnable
+   - void run();
+- Supplier&lt;T&gt;
+   - T get();
+- Consummer&lt;T&gt; 
+   - void accept(T t);
+- Function&lt;T, R&gt; 
+   - R apply(T t);
+- Predicate&lt;T&gt; 
+   - boolean test(T t);
 
 <hr>
 
 ### 파라미터가 두 개인 함수형 인터페이스
 
-- BiConsumer&lt;T, U&gt; : void accept(T t, U u);
-- BiPredicate&lt;T, U&gt; : boolean test(T t, U u);
-- BiFunction&lt;T, U, R&gt; : R apply(T t, U u);
+- BiConsumer&lt;T, U&gt; 
+   - void accept(T t, U u);
+- BiPredicate&lt;T, U&gt; 
+   - boolean test(T t, U u);
+- BiFunction&lt;T, U, R&gt; 
+   - R apply(T t, U u);
 
 > 파라미터가 3개 이상인 함수형 인터페이스의 경우 직접 정의하여 사용해야 한다. 
 
@@ -280,8 +292,10 @@ public class Lamda_공부 {
 
 ### 하나의 파라미터를 받고 동일한 타입을 리턴하는 함수형 인터페이스
 
-- UnaryOperator&lt;T&gt; : T apply(T t);
-- BinaryOperator&lt;T&gt; : T apply(T t1, T t2);
+- UnaryOperator&lt;T&gt; 
+   - T apply(T t);
+- BinaryOperator&lt;T&gt; 
+   - T apply(T t1, T t2);
 
 > 대부분 람다식은 단순하기 때문에 두 개의 파라미터만으로도 충분히 정의가 되기 때문에 패키지에 대부분 포함되어 있다.
 
@@ -292,15 +306,21 @@ public class Lamda_공부 {
 
 ### 기본형(Primitive Type)을 사용하는 함수형 인터페이스
 
-- IntFunction&lt;R&gt; : R apply(int value);
-- LongFunction&lt;R&gt; : R apply(long value);
-- DoubleFunction&lt;R&gt; : R apply(double value);
+- IntFunction&lt;R&gt; 
+   - R apply(int value);
+- LongFunction&lt;R&gt; 
+   - R apply(long value);
+- DoubleFunction&lt;R&gt; 
+   - R apply(double value);
 
 <br>
 
-- ToIntFunction&lt;T&gt; : int applyAsInt(T t)
-- ToLonFunction&lt;T&gt; : long applyAsLong(T t)
-- ToDoubleFunction&lt;T&gt; : double applyAsDouble(T t)
+- ToIntFunction&lt;T&gt; 
+   - int applyAsInt(T t)
+- ToLonFunction&lt;T&gt; 
+   - long applyAsLong(T t)
+- ToDoubleFunction&lt;T&gt; 
+   - double applyAsDouble(T t)
 
 > 함수형 인터페이스의 이름을 살펴보면 어떤 기본 타입과 연관되어 있는지 알 수 있다. 이 밖에도 IntTolongFunction, DoubleToIntFunction, ObjIntConsumer&lt;T&gt; 등도 존재한다.
 
@@ -310,15 +330,19 @@ public class Lamda_공부 {
 
 <code>형식 : 인터페이스 | 메서드 : 설명</code>
 
-- Collection | boolean removeIf(Perdicate&lt;E&gt; filter); : 조건에 맞는 엘리먼트 삭제
-- List | void replaceAll(UnaryOperator&lt;E&gt; operator); : 모든 엘리먼트에 operator를 적용하여 대체(replace)
-- Iterable | void forEach(Consumer&lt;T&gt; action); : 모든 엘리먼트에 action 수행
-- Map | V compute(K key, BiFunction&lt;K, V, V&gt; f); : 지정된 키에 해당하는 값에 f를 수행
-- Map | V computeIfAbsent(K key, Function&lt;K, V&gt; f); : 지정된 키가 없으면 f 수행 후 추가
-- Map | V computeIfPresent(K key, BiFunction&lt;K, V, V&gt; f); : 지정된 키가 있을 때, f 수행
-- Map | V merge(K key, V value, BiFunction&lt;K, V, V&gt; f); : 모든 엘리먼트에 Merge 작업 수행, 키에 해당하는 값이 있으면 f를 수행해 병합 후 할당
-- Map | void forEach(BiConsumer&lt;K, V&gt; action); : 모든 엘리먼트에 action 수행
-- Map | void replaceAll(BiFunction&lt;K, V, V&gt; f); : 모든 엘리먼트에 f 수행 후 대체
+- Collection 
+   - boolean removeIf(Perdicate&lt;E&gt; filter); : 조건에 맞는 엘리먼트 삭제
+- List 
+   - void replaceAll(UnaryOperator&lt;E&gt; operator); : 모든 엘리먼트에 operator를 적용하여 대체(replace)
+- Iterable 
+   - void forEach(Consumer&lt;T&gt; action); : 모든 엘리먼트에 action 수행
+- Map 
+   - V compute(K key, BiFunction&lt;K, V, V&gt; f); : 지정된 키에 해당하는 값에 f를 수행
+   - V computeIfAbsent(K key, Function&lt;K, V&gt; f); : 지정된 키가 없으면 f 수행 후 추가
+   - V computeIfPresent(K key, BiFunction&lt;K, V, V&gt; f); : 지정된 키가 있을 때, f 수행
+   - V merge(K key, V value, BiFunction&lt;K, V, V&gt; f); : 모든 엘리먼트에 Merge 작업 수행, 키에 해당하는 값이 있으면 f를 수행해 병합 후 할당
+   - void forEach(BiConsumer&lt;K, V&gt; action); : 모든 엘리먼트에 action 수행
+   - void replaceAll(BiFunction&lt;K, V, V&gt; f); : 모든 엘리먼트에 f 수행 후 대체
 
 
 
@@ -359,16 +383,71 @@ public class Lamda_공부 {
 - default Predicate&lt;T&gt; or (Predicate&lt;? super T&gt; other);
 - default Predicate&lt;T&gt; negate();
 - static &lt;T&gt; Predicate&lt;T&gt; isEqual(Object targetRef);
-- 예시
-```java
-Predicate<Integer> greater = x -> x > 10;
-Predicate<Integer>
-```
+
+<br>
+
+#### 예시
+
+![image](https://user-images.githubusercontent.com/74396651/217121485-0989719a-9599-431e-be07-d2d39b92a2ea.png)
+
+![image](https://user-images.githubusercontent.com/74396651/217121217-368a7043-ea04-4218-8d13-2e6f98a7a6db.png)
+
+<br>
+<hr>
+<br>
+
+## 메서드 참조
+> 익명 객체의 메서드를 간결하게 표현해 주는 람다를 더 간결하게 표현할 수 있다.
+
+![image](https://user-images.githubusercontent.com/74396651/217124128-8038a3bb-682f-4dbb-ad6b-3a37cf77997d.png)
+
+- 람다의 경우 하나의 인자와 하나의 식으로 구성된 굉장히 간단한 형태이다. 이런 메소드 호출의 경우 메소드 참조를 이용해서 다음과 같이 더욱 간결하게 줄일 수 있다.
+- 람다의 문법에서 많은 부분이 생략되었지만 자바 컴파일러는 함수형 인터페이스의 제네릭 타입으로부터 원래 형태의 람다를 유추해낼 수 있다. 따라서 소스코드를 더욱 간결하게 작성할 수 있게 된 것이다.
 
 
+<br>
+<hr>
+<br>
+
+## 생성자의 메소드 참조
+> 객체를 생성하는 생성자의 경우에도 메서드 참조로 변환할 수 있다. 앞서 살펴본 미리 정의된 함수형 인터페이스인 Supplier를 예시로 들겠다.
+
+![image](https://user-images.githubusercontent.com/74396651/217125851-5a28314d-0ba8-4956-8c72-5930b2b1465d.png)
 
 
+<hr>
 
+## 변수 범위
+> 자바에서 람다를 사용할 때 변수의 범위(Scope)와 관련해 알아둬야 할 것들이 있다. 
+
+![image](https://user-images.githubusercontent.com/74396651/217127551-1c5c575f-cafc-42e8-bf03-89bf330ee676.png)
+- 람다의 변수는 불변해야 한다!
+
+<br>
+
+###3 effectively final
+- 오라클 문서 정의
+> "A variable or parameter whose value is never changed after it is initialized is effectively final"
+- final 키워드를 붙여서 선언하지는 않지만, 초기화 된 이후로 값의 할당이 변경되지 않는 변수를 'effectively final'이라고 하는 모양이다. 
+- 키워드를 붙이지 않아도 코드 패스에서 변하지 않는 변수는 자바 컴파일러가 final로 간주하여 람다 내부에서 쓸 수 있게 허용하나 보다.
+
+<hr>
+
+## 변수의 섀도잉(Variable Shadowing)
+
+![image](https://user-images.githubusercontent.com/74396651/217129582-f5d7d72f-98b7-4c3b-8f63-874d0c900d37.png)
+
+- 각 메소드에서 리턴하는 함수가 참조하는 number 변수는 effectively final이어야 한다.
+   - getFunction1은 100을 리턴
+   - getFunction2는 파라미터를 곱한 값을 리턴
+   - getFUnction3은 200을 리턴
+
+<hr>
+
+## this 키워드
+> 람다의 몸통에서 this 키워드를 상용하는 경우
+> 
+![image](https://user-images.githubusercontent.com/74396651/217132337-a2a7af7b-6cd0-4820-88c6-81353eaca326.png)
 
 
 
