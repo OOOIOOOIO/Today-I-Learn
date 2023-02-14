@@ -14,7 +14,7 @@
 - 기본적으로 Process는 최소 1개의 Thread(메인 쓰레드)를 가지고 있다.
 - 각 프로세스는 별도의 주소 공간에서 실행되며, 한 Process 다른 Process 변수나 자료구조에 접근할 수 없다.
 - Process가 다른 Process의 자원에 접근하려면 Process 간의 통신(IPC, inter-process communication)을 사용해야 한다.
-   - 파이프, 파일, 소켓 등을 이용한 통신 방법 이용
+   - 파이프, 파일, 소켓 등을 이용한 통신 방법 이용!
 
 <br>
 <hr>
