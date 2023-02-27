@@ -103,7 +103,13 @@ c.convert(Duration.ofHours(72));	// 3
  
 
 ## 10. Dynamic Class-File Constants (JEP 309)
- 
+- Java 클래스 파일 형식은 CONSTANT_Dynamic 이라는 새로운 상수 풀 형식을 지원하도록 확장 되었다.
+
+- 새 상수 풀을로드하면 invokedynamic  호출 사이트를 연결하는 것이 연결을 부트 스트랩 메서드에 위임 하는 것처럼 생성을 부트 스트랩 메서드에 위임한다.
+
+- 이 기능은 성능을 향상시키고 언어 디자이너와 컴파일러 구현자를 대상으로 한다.
+
+
 
 ## 11. Java Flight Recorder  (JEP 328)
 - 상업용 OracleJDK 에 제공되던 JFR이 OpenJDF에 포함된다.
@@ -111,6 +117,8 @@ c.convert(Duration.ofHours(72));	// 3
 - Java 어플리케이션으로부터 프로파일링, 어플리케이션 진단 데이터 등을 얻을 수 있음.
 
 - 성능 오버헤드가 1% 미만으로 알려져 있어, 운영 환경에서 사용할 수 있음.
+- 다음 매개 변수를 사용할 수 있다.
+   - -XX:StartFlightRecording=duration=120s,settings=profile,filename=java-demo-app.jfr
 
  
 
@@ -120,7 +128,21 @@ c.convert(Duration.ofHours(72));	// 3
 - 그간 HTTP 통신을 위해 사용된 코드보다 성능이 개선됨.
 
 - HTTP/1.1, HTTP/2, WebSocket을 지원한다. 
+```java
+HttpClient httpClient = HttpClient.newBuilder()
+  .version(HttpClient.Version.HTTP_2)
+  .connectTimeout(Duration.ofSeconds(20))
+  .build();
+  
+HttpRequest httpRequest = HttpRequest.newBuilder()
+  .GET()
+  .uri(URI.create("http://localhost:" + port))
+  .build();
+  
+HttpResponse httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
+assertThat(httpResponse.body()).isEqualTo("Hello from the server!");
+```
  
 
 ## 13. java 파일 실행 (JEP 330)
@@ -183,3 +205,4 @@ Hello world!!
 <br>
 
 [참고1](https://parkcheolu.tistory.com/174)
+[참고2](https://recordsoflife.tistory.com/350)
