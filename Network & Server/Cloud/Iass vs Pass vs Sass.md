@@ -11,7 +11,7 @@
 <hr>
 <br>
 
-# Iaas(Infrastructure as a Service, 아에서 / 이아스)란
+# Iaas(Infrastructure as a Service, 아이에스)란
 > &nbsp;서버, 네트워크, 스토리지, 메모리, CPU 등 가상 인프라를 빌려주는 서비스이다. OS, 미들웨어 등은 사용자가 직접 설치하고 관리하기 때문에 클라우드 서비스 중 가장 덜 의존적이다.
 - AWS EC2, S3
 
@@ -29,7 +29,7 @@
 
 # Saas(Software as a Service, 사스)란
 > &nbsp;클라우드를 통해 제공되는 소프트웨어로 별도의 설치나 전환 과정 없이 퍼블릭 클라우드에 설치되어 있는 애플리케이션, 서비스를 인터넷을 통해 제공받는 것을 말한다. 구글, 마이크로소프트, 어도비 등 과거 설치형 서비스가 Saas 서비스로 변화하고 있다
-- 구글 doc, 어도비 photoshop, 세일즈포스
+- Google Docs, Drive, Gmail, 어도비 photoshop, 세일즈포스
 
 <br>
 <hr>
