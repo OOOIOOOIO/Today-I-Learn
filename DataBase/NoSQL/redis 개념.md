@@ -47,6 +47,22 @@ Redis는 데이터를 DISK에 저장하는 방식은 크게 두 가지 방식이
 - Rdeis Cluster
   - Redis는 클러스터링을 지원하기에 실무에서는 주로 클러스터로 묶어서 가용성 및 안정성 있는 캐시 매니저로 사용하고 있다.
 
+<br>
+
+## Redis 스키마
+사용자의 이메일, 닉네임, 최근 로그인 시간을 저장해보자.
+- user:userId:email:polite159@gmail.com(문자열)
+- user:userId:nickname:polite159(문자열)
+- user:userId:lastLogin:2023-04-03(문자열)
+
+- 스키마를 활용하면 사용자 아이디에 해당하는 userId만 알아도 연결된 데이터인 email, nickname, lastLogin도 알 수 있게 된다.
+
+
+
+
+
+
+
 
    
    
