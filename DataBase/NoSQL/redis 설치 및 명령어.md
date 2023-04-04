@@ -1,12 +1,7 @@
-# Redis 사용법
-
-## 데이터 처리(명령어)
-![image](https://user-images.githubusercontent.com/74396651/229422217-0771d082-578a-4132-a2cd-0589567cc33c.png)
+# Redis 설치 및 명령어
 
 
-
-
-## 다운 및 실행
+## 설치 및 실행
 ```
 brew install redis (Mac Redis 설치)
 redis-server (Redis Server 실행)
@@ -20,6 +15,8 @@ brew services restart redis (Redis 서비스 재시작)
 flushAll (Redis 모든 Key 삭제)
 ```
 <img width="608" alt="image" src="https://user-images.githubusercontent.com/74396651/229424909-9f703dee-601e-46ea-b943-2174d46fdb06.png">
+
+<br>
 
 ## info 명령어
 info 명령은 레디스가 실행된 이후 각종 통계와 설정 정보를 출력
@@ -39,4 +36,16 @@ info 명령은 레디스가 실행된 이후 각종 통계와 설정 정보를 �
   - CPU 사용률 통계 정보
 - Keyspace
   - 데이터베이스별로 저장된 키 정보
+
+<br>
+
+
+
+<br>
+
+## 데이터 처리(기본 명령어)
+![image](https://user-images.githubusercontent.com/74396651/229422217-0771d082-578a-4132-a2cd-0589567cc33c.png)
+
+
+
 
