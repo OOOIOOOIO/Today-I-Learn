@@ -100,6 +100,22 @@ Document 타입의 DB인 MongoDB와는 다르게 Redis의 Hash는 중첩이 될 
 ### List
 여러 개의 순서적인 값을 포함하여, Queue와 Stack 모두로 동작할 수 있다. Queue는 FIFO(first in, first out) 알고리즘으로 동작하며, Stack은 LIFO(last in, frist out) 알고리즘으로 동작한다. List는 많은 복잡한 동작을 할 수 있다. 리스트 중간에 데이터를 끼워 넣거나, 크기를 제한 하거나, 리스트들간의 값을 옮길 수도 있다.
 
+- RPUSH / LPUSH
+<img width="304" alt="image" src="https://user-images.githubusercontent.com/74396651/232008395-1c32d6a3-731f-4e0f-9a2b-a09c8b97772a.png">
+
+- LLEN
+<img width="235" alt="image" src="https://user-images.githubusercontent.com/74396651/232008423-186cfaef-28e3-4731-9fe3-18e4ec70e86d.png">
+
+- LRANGE
+<img width="262" alt="image" src="https://user-images.githubusercontent.com/74396651/232008513-ebfc6a98-ed9f-4024-a2d3-9d8cae35240c.png">
+
+- RPOP / LPOP
+<img width="230" alt="image" src="https://user-images.githubusercontent.com/74396651/232008559-6f23c21b-7c8a-4ded-8bda-b582a5f1322d.png">
+
+- LREM
+<img width="301" alt="image" src="https://user-images.githubusercontent.com/74396651/232008945-2cc4fcf3-deba-44dd-8f80-c3aff97229f0.png">
+
+
 <br>
 <hr>
 <br>
