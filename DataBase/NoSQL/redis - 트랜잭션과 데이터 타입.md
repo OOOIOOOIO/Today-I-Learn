@@ -62,7 +62,7 @@ discard 명령을 실행 후에 exec를 실행하면 queue 쌓였던 명령들�
 
 <br>
 
-### Hash
+## Hash
 논리적으로 key 필드를 구분하는 대신 key-value 쌍으로 된 데이터를 포함하는 Hash를 생성할 수 있다. Key 필드를 나타낼 때에는 콜론(:)을 사용한다. 해시는 Key 필드를 사용함으로 Key 자체의 값을 주지 않아도 된다.<br>
 Document 타입의 DB인 MongoDB와는 다르게 Redis의 Hash는 중첩이 될 수 없다. List 타입의 데이터 타입에서도 중첩은 불가능합니다. Hash는 문자열 값만 저장 할 수 있다. Hash의 값으로 다른 Hash에 저장하는것도 불가능하다.
 
@@ -97,30 +97,63 @@ Document 타입의 DB인 MongoDB와는 다르게 Redis의 Hash는 중첩이 될 
 
 <br>
 
-### List
-여러 개의 순서적인 값을 포함하여, Queue와 Stack 모두로 동작할 수 있다. Queue는 FIFO(first in, first out) 알고리즘으로 동작하며, Stack은 LIFO(last in, frist out) 알고리즘으로 동작한다. List는 많은 복잡한 동작을 할 수 있다. 리스트 중간에 데이터를 끼워 넣거나, 크기를 제한 하거나, 리스트들간의 값을 옮길 수도 있다.
+## List
+여러 개의 순서적인 값을 포함하여, Queue와 Stack 모두로 동작할 수 있다. Queue는 FIFO(first in, first out) 알고리즘으로 동작하며, Stack은 LIFO(last in, frist out) 알고리즘으로 동작한다. List는 많은 복잡한 동작을 할 수 있다. 리스트 중간에 데이터를 끼워 넣거나, 크기를 제한 하거나, 리스트들간의 값을 옮길 수도 있다.<br>
+Redis의 모든 List 연산에서는 0을 기준으로 하는 인덱스를 사용한다. 맨 왼쪽, 첫번째의 요소가 1이 아닌 0으로 시작합니다. 인덱스 값이 음수인 경우는 끝(오른쪽)에서 앞쪽(왼쪽)으로 오면서 나타내는 위치를 의미한다. -1은 맨 끝(오른쪽)이다.
 
-- RPUSH / LPUSH
+- RPUSH / LPUSH : 오른쪽/왼쪽에 삽입
 <img width="304" alt="image" src="https://user-images.githubusercontent.com/74396651/232008395-1c32d6a3-731f-4e0f-9a2b-a09c8b97772a.png">
 
-- LLEN
+- LLEN : 리스트 크기 출력
 <img width="235" alt="image" src="https://user-images.githubusercontent.com/74396651/232008423-186cfaef-28e3-4731-9fe3-18e4ec70e86d.png">
 
-- LRANGE
+- LRANGE : 범위를 지정하여 리스트 부분 조회
 <img width="262" alt="image" src="https://user-images.githubusercontent.com/74396651/232008513-ebfc6a98-ed9f-4024-a2d3-9d8cae35240c.png">
 
-- RPOP / LPOP
+- RPOP / LPOP : 오른쪽/왼쪽 한 후 삭제
 <img width="230" alt="image" src="https://user-images.githubusercontent.com/74396651/232008559-6f23c21b-7c8a-4ded-8bda-b582a5f1322d.png">
 
-- LREM
+- LREM : 주어진 키로부터 일치되는 값 삭제, 삭제할 개수와 값 입력
 <img width="301" alt="image" src="https://user-images.githubusercontent.com/74396651/232008945-2cc4fcf3-deba-44dd-8f80-c3aff97229f0.png">
+- RPOPLPUSH : 오른쪽 호출 후 왼쪽에 넣기, RPOPLPUSH만 명령어가 존재하며, RPOPRPUSH, LPOPLPUSH, LPOPRPUSH 같은 명령어는 존재하지 않는다. 해당 조합 명령은 cli에서는 불가능하며, Redis를 지원하는 프로그래밍 언어에서 멀티블록을 엮어서 실행하면 된다.
+
+- Blocking List :  호출할 값이 생성되기 전까지 Blocking을 하는 명령어. 값을 호출하기 위한 키와 타임아웃 시간(초)가 필요.
 
 
 <br>
 <hr>
 <br>
 
-## GET/SET과 HGET/HSET의 차이
+## SET
+Set은 중복된 값이 없고 정렬이 되지 않은 데이터들의 모임이다. 두 개 이상의 키 값들 간의 Union이나 intersection 같은 복잡한 연산을 수행할 때 필요하다. 하나의 공통 키를 갖는 집합을 만들고자 하며, SADD 명령을 통해 값을 추가할 수 있다.
+
+- SADD : set 생성
+<img width="321" alt="image" src="https://user-images.githubusercontent.com/74396651/236630658-d46b04a7-7f36-4424-b71b-02f90cb716fa.png">
+
+- SMEMBERS : set이 가진 값 출력
+
+<img width="244" alt="image" src="https://user-images.githubusercontent.com/74396651/236630665-b6b7e95c-997f-4953-b177-54eca3cc63fb.png">
+
+- SINTER : 교집합
+
+<img width="317" alt="image" src="https://user-images.githubusercontent.com/74396651/236630703-26f8b42d-d694-4310-8da6-f477856d5862.png">
+
+- SDIFF : 차집합
+
+<img width="297" alt="image" src="https://user-images.githubusercontent.com/74396651/236630718-1b188052-9c79-4267-9e6e-d592882d1dca.png">
+
+- SUNION : 합집합
+
+<img width="272" alt="image" src="https://user-images.githubusercontent.com/74396651/236630729-a53327f3-9dbc-4b14-88e5-cc34ad0add39.png">
+
+- SUNIONSTORE, SINTERSTORE, SDIFFSTORE : 연산 결과를 새로운 SET으로 저장
+
+- SMOVE : 한 SET의 값들으 다른 SET으로 이동
+- SCARD : SET의 개수를 카운트
+- SPOP : 무작위로 값 추출
+- SREM : SET에서 값 삭제
+
+### GET/SET과 HGET/HSET의 차이
 
 ![image](https://user-images.githubusercontent.com/74396651/229754963-08789ed5-94f4-48cc-8eb7-e70c2af1a3b3.png)
 [참고](https://velog.io/@kimjiwonpg98/Redis-SET-vs-HSET)
