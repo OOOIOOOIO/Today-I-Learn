@@ -1,5 +1,5 @@
 # Serialization(직렬화) - Java
-
+단순히 객체를 바이너리로 변환하는구나 라고 생각했었다. 정확히 왜 하는지 궁금해서 정리한다.
 ![image](https://github.com/OOOIOOOIO/Today-I-Learn/assets/74396651/cc8b61da-b1e0-4b40-a8a3-1540c504a511)
 > Serializable 인터페이스를 보면 아무것도 없는 것을 확인할 수 있다. 하지만 우리가 만든 클래스가 파일에 읽거나 쓸 수 있도록 하거나, 다른 서버로 보내거나 받을 수 있게 하려면 반드시 Serializable 인터페이스를 상속받아야 한다.
 
