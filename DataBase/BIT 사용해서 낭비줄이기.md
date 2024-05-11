@@ -1,0 +1,1 @@
+https://velog.io/@suba0113/MySQL-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85-%EC%A0%95%EB%A6%AC
